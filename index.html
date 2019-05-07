@@ -2,6 +2,7 @@
 <html>
 <head>
  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800" rel="stylesheet">  <link rel="stylesheet" type="text/css" href="styles1.css">
+  <link rel="stylesheet" type="text/css" href="styles1.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Number Guesser</title>
 </head>
@@ -35,6 +36,21 @@
           value="Update"
           class="button"
         >
+=======
+    <h1>NUMBER <span>GUESSER</span></h1>
+    <h2>Ultimate Challenger Edition</h2>
+  </header>
+  <main>
+    <section class="left">
+      <form class="range_form">
+        <h3>Set Range</h3>
+        <label for="min_range">Min Range
+          <input type="text" id="min_range" name="min_range">
+        </label>
+        <label for="max_range">Max Range
+          <input type="text" id="max_range" name="max_range">
+        </label>
+        <input type="submit" id="set_range" name="set_range" value="Update">
       </form>
       <form>
         <p>The Current Range is <span id="lower_range"></span> to <span id="upper_range"></span></p>
@@ -90,21 +106,40 @@
           class="button"
           id="clear_game"
         > 
+        <label for="challenger_1_name">Name
+          <input type="text" id="challenger_1_name" name="challenger_1_name">
+        </label>
+        <label for="challenger_1_guess">Guess
+          <input type="text" id="challenger_1_guess" name="challenger_1_guess">
+        </label>
+        <h3>Challenger 2</h3>
+        <label for="challenger_2_name">Name
+          <input type="text" id="challenger_2_name" name="challenger_2_name">
+        </label>
+        <label for="challenger_2_guess">Guess
+          <input type="text" id="challenger_2_guess" name="challenger_2_guess">
+        </label>
+      </form>
+        <input type="submit" name="submit_guess" value="Submit Guess" id="submit_guess">
+        <input type="submit" name="reset_game" value="Reset Game" id="reset_game">
+        <input type="submit" name="clear_game" value="Clear Game" id="clear_game"> 
       <div>
         <section class="challenger_1_current_guess">
           <h3>Latest Score</h3>
           <h4 id="challenger_1_name"></h4>
           <p class="current-guess">current guess</p>
-        </section>
+          <p>current guess</p>
+                  </section>
         <section class="challenger_2_current_guess">
           <h3>Latest Score</h3>
           <h4 id="challenger_2_name"></h4>
           <p class="current-guess">current guess</p>
-        </section>
+          <p>current guess</p>
+                  </section>
       </div>
     </section>
     <section class="right">
-    </section>
+      </section>
   </main>
   <script type="text/javascript" src="javascript.js"></script>
 </body>
