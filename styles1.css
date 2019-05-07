@@ -1,0 +1,109 @@
+/** {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: red 1px solid;
+}
+*/
+body {
+	width: 100%;
+}
+
+/********** Header *****************/
+
+header {
+	background-color: black;
+	text-align: center;
+	margin-left: -8px;
+}
+
+h1 {
+	color: #DD1972;
+	font-family: 'Open Sans', sans-serif; 
+	/*font-size: 50px;*/
+	font-style: bold;
+}
+
+span {
+	font-weight: 300;
+}
+
+h2 {
+	color: white;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+    text-align: center; 
+    position: relative;
+    overflow: hidden;
+}
+
+h2:before, h2:after {
+	position: absolute;
+	top: 51%;
+	overflow: hidden;
+	width: 50%;
+	height: 1px;
+	content: '\ a0';
+	background-color: white;
+}
+
+h2:before {
+	margin-left: -50%;
+	text-align: right;
+}
+
+/************* Main Body ********************/
+
+main {
+	font-family: 'Open Sans', sans-serif; 
+}
+
+h3 {
+	font-weight: 800;
+}
+
+input,
+label {
+	font-family: 'Open Sans', sans-serif; 
+	font-weight: 300;
+	/*display: block;*/
+}
+
+input {
+	padding-left: 3px;
+}
+
+.set_range {
+	display: flex;
+	height: 20vh;
+	flex-direction: column;
+	flex-wrap: wrap;
+}
+.left {
+	background-color: #F7F7F7;
+}
+
+.button {
+	background-color: #D0D2D3;
+	border-radius: 15%;
+	color: #FFFFFF;
+}
+
+.button:visited {
+	background-color: #6E6E6E;
+	color: #FFFFFF;
+}
+
+.button:hover {
+	background-color: #DD1972;
+	color: white;
+}
+
+.current_guess {
+	font-weight: 300;
+}
+
+.right {
+	background-color: #404041;
+	float: right;
+}
