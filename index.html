@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans: 300, 700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300, 400, 700" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="styles1.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Number Guesser</title>
 </head>
 <body>
   <header>
-    <h1>NUMBER <span>GUESSER</span></h1>
-    <h2>Ultimate Challenger Edition</h2>
+    <h1 class="heading">NUMBER <span>GUESSER</span></h1>
+    <h2><span class="line-through-heading">Ultimate Challenger Edition</span></h2>
   </header>
   <main>
     <section class="left">
-      <form class="range_form">
-        <h3>Set Range</h3>
-        <label for="min_range"> Min Range
-          <input 
-            type="text"
-            id="min_range" 
-            name="min_range"
-          >
-        </label>
+      <h3>Set Range</h3>
+        <form class="range_form">
+          <label for="min_range"> Min Range
+            <input 
+              type="text"
+              id="min_range"
+              name="min_range"
+            >
+          </label>
         <label for="max_range"> Max Range
           <input 
             type="text" 
@@ -34,6 +34,7 @@
           id="set_range" 
           name="set_range" 
           value="Update"
+          class="button"
         >
       </form>
       <form>
@@ -49,7 +50,7 @@
         <label for="challenger_1_guess"> Guess
           <input 
             type="text" 
-            id="challenger_1_guess" 
+            id="challenger_1_guess"
             name="challenger_1_guess"
           >
         </label>
@@ -73,30 +74,33 @@
           type="submit" 
           name="submit_guess" 
           value="Submit Guess" 
+          class="button"
           id="submit_guess"
         >
         <input 
           type="submit" 
           name="reset_game" 
-          value="Reset Game" 
+          value="Reset Game"
+          class="button" 
           id="reset_game"
         >
         <input 
           type="submit" 
           name="clear_game" 
           value="Clear Game" 
+          class="button"
           id="clear_game"
         > 
       <div>
         <section class="challenger_1_current_guess">
           <h3>Latest Score</h3>
           <h4 id="challenger_1_name"></h4>
-          <p>current guess</p>
+          <p class="current-guess">current guess</p>
         </section>
         <section class="challenger_2_current_guess">
           <h3>Latest Score</h3>
           <h4 id="challenger_2_name"></h4>
-          <p>current guess</p>
+          <p class="current-guess">current guess</p>
         </section>
       </div>
     </section>

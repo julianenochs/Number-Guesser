@@ -1,11 +1,17 @@
+body {
+	width: 100%;
+}
+
 header {
-	background-color: black;	
+	background-color: black;
+	text-align: center;
 }
 
 h1 {
 	color: #DD1972;
 	font-family: 'Open Sans', sans-serif; 
-	font-weight: 700;
+	font-size: 50px;
+	font-style: bold;
 }
 
 span {
@@ -16,12 +22,50 @@ h2 {
 	color: white;
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 300;
+    text-align: center; 
+    /*line-height: .3;*/
+}
+
+h3 {
+	font-style: bold;
+}
+
+main {
+	font-family: 'Open Sans', sans-serif; 
+
+}
+
+input {
+	font-family: 'Open Sans', sans-serif; 
+	display: block;
+
 }
 
 .left {
 	background-color: #F7F7F7;
+	float: left;
+}
+
+.current-guess {
+	font-style: thin;
+}
+
+.button {
+	background-color: #D0D2D3;
+	border-radius: 15%;
+	color: #FFFFFF;
+}
+
+button:active {
+	background-color: #6E6E6E;
+	color: #FFFFFF;
+
 }
 
 .right {
 	background-color: #404041;
+	float: right;
 }
+
+
+
