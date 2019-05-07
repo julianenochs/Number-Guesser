@@ -56,26 +56,31 @@ h2:before {
 
 main {
 	font-family: 'Open Sans', sans-serif; 
-	display: flex;
-	align-items: stretch;
 }
 
 h3 {
 	font-weight: 800;
 }
 
-input {
-	font-family: 'Open Sans', sans-serif; 
-	display: block;
-}
-
+input,
 label {
+	font-family: 'Open Sans', sans-serif; 
 	font-weight: 300;
+	/*display: block;*/
 }
 
+input {
+	padding-left: 3px;
+}
+
+.set_range {
+	display: flex;
+	height: 20vh;
+	flex-direction: column;
+	flex-wrap: wrap;
+}
 .left {
 	background-color: #F7F7F7;
-
 }
 
 .button {
