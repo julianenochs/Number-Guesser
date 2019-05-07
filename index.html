@@ -12,19 +12,20 @@
   </header>
   <main>
     <section class="left">
-      <form>
+      <form class="range_form">
         <h3>Set Range</h3>
-        
+        <input type="submit" name="set_range" value="Update">
       </form>
       <form>
+        <p>The Current Range is <span id="lower_range"></span> to <span id="upper_range"></span></p>
         <h3>Challenger 1</h3>
-      
+          
         <h3>Challenger 2</h3>
         
       </form>
-      <input type="submit" name="submit_guess" value="Submit Guess">
-      <input type="submit" name="reset_game" value="Reset Game">
-      <input type="submit" name="clear_game" value="Clear Game">
+      <input type="submit" name="submit_guess" value="Submit Guess" id="submit_guess">
+      <input type="submit" name="reset_game" value="Reset Game" id="reset_game">
+      <input type="submit" name="clear_game" value="Clear Game" id="clear_game">
       
     </section>
     <section class="right">
