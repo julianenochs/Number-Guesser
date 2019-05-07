@@ -10,7 +10,7 @@ header {
 h1 {
 	color: #DD1972;
 	font-family: 'Open Sans', sans-serif; 
-	font-size: 50px;
+	/*font-size: 50px;*/
 	font-style: bold;
 }
 
@@ -27,7 +27,7 @@ h2 {
 }
 
 h3 {
-	font-style: bold;
+	font-weight: 800;
 }
 
 main {
@@ -41,13 +41,14 @@ input {
 
 }
 
+label {
+	font-weight: 300;
+}
+
+
 .left {
 	background-color: #F7F7F7;
 	float: left;
-}
-
-.current-guess {
-	font-style: thin;
 }
 
 .button {
@@ -59,7 +60,6 @@ input {
 button:active {
 	background-color: #6E6E6E;
 	color: #FFFFFF;
-
 }
 
 .right {
