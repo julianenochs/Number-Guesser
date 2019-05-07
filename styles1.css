@@ -73,14 +73,25 @@ input {
 	padding-left: 3px;
 }
 
+.left {
+	background-color: #F7F7F7;
+	float: left;
+	border-right: solid, grey;
+}
+
 .set_range {
 	display: flex;
 	height: 20vh;
 	flex-direction: column;
 	flex-wrap: wrap;
 }
-.left {
-	background-color: #F7F7F7;
+
+.current_range {
+
+}
+
+.latest_score {
+
 }
 
 .button {
