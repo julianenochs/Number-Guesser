@@ -7,6 +7,7 @@
 */
 body {
 	width: 100%;
+	box-sizing: border-box;
 }
 
 /********** Header *****************/
@@ -76,6 +77,10 @@ label,
 input {
 	padding-left: 3px;
 }
+
+/*form-input {
+	display: inline-block;
+}*/
 
 .left {
 	background-color: #F7F7F7;
