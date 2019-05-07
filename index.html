@@ -14,7 +14,13 @@
     <section class="left">
       <form class="range_form">
         <h3>Set Range</h3>
-        <input type="submit" name="set_range" value="Update">
+        <label for="min_range">Min Range
+          <input type="text" id="min_range" name="min_range">
+        </label>
+        <label for="max_range">Max Range
+          <input type="text" id="max_range" name="max_range">
+        </label>
+        <input type="submit" id="set_range" name="set_range" value="Update">
       </form>
       <form>
         <p>The Current Range is <span id="lower_range"></span> to <span id="upper_range"></span></p>
