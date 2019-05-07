@@ -1,0 +1,27 @@
+header {
+	background-color: black;	
+}
+
+h1 {
+	color: #DD1972;
+	font-family: 'Open Sans', sans-serif; 
+	font-weight: 700;
+}
+
+span {
+	font-weight: 300;
+}
+
+h2 {
+	color: white;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+}
+
+.left {
+	background-color: #F7F7F7;
+}
+
+.right {
+	background-color: #404041;
+}
