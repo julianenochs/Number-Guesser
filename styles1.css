@@ -70,7 +70,7 @@ label,
  {
 	font-family: 'Open Sans', sans-serif; 
 	font-weight: 300;
-	display: block;
+/* 	display: block; */
 }
 
 input {
@@ -98,17 +98,40 @@ input {
 }
 
 .current_range {
+	display: flex;
+	justify-content: center;
+	background-color: white;
+	border: solid 2px #D0D2D3;
+	margin: 30px 30px 30px 30px;
+	padding: 0px 0px 20px 20px;
 
 }
 
 .latest_score {
+	display: flex;
+	justify-content: space-around;
+	background-color: white;
+	border: solid 2px #D0D2D3;
+	margin: 30px 30px 30px 30px;
+	padding: 60px 0 60px 0;
+}
 
+.challenger_1_current_guess {
+	border-right: 2px solid #D0D2D3;
+	text-align: center;
+	width: 50%;
+}
+
+.challenger_2_current_guess {
+	text-align: center;
+	width: 50%;
 }
 
 .button {
 	background-color: #D0D2D3;
 	border-radius: 15%;
 	color: #FFFFFF;
+	height: 20px;
 }
 
 .button:visited {
