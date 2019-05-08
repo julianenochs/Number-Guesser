@@ -116,6 +116,17 @@ form.range_form {
 	padding: 0px 25px 0px 25px;	
 }
 
+input#range {
+	width: 200px;
+	height: 20px;
+	display: block;
+}
+.min_range_input {
+	display: flex;
+	padding: 0px 200px 0px 0px;
+	width: 40px;
+}
+
 .current_range {
 	display: flex;
 	justify-content: center;
