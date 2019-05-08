@@ -15,6 +15,9 @@
       Ultimate Challenger Edition
     </span>
   </h2>
+        Ultimate Challenger Edition 
+      </span>
+    </h2>
   </header>
   <main>
     <section class="left">
@@ -23,25 +26,25 @@
         <form class="range_form">
           <section class="min_range_input">
           <label for="min_range"> Min Range
-          <input 
-          type="Number"
-          id="min_range"
-          name="min_range"
-          >
-          </label>
+            <input 
+              type="Number"
+              id="range"
+              name="min_range"
+            >
+            </label>
         </section>
         <section class="max_range_input">
         <label for="max_range"> Max Range
           <input 
             type="Number" 
-            id="max_range" 
+            id="range" 
             name="max_range"
           >
         </label>
         </section>
         <input 
           type="submit" 
-          id="set_range" 
+          id="set_range_button" 
           name="set_range" 
           value="Update"
           class="button"
@@ -62,6 +65,8 @@
             name="challenger_1_name"
           >
         </label>
+      </section>
+        <section class="one_guess">
         <label for="challenger_1_guess"> Guess
           <input 
             type="number" 
@@ -71,7 +76,8 @@
         </label>
       </section>
         <h3>Challenger 2</h3>
-        <section class="challenger_2_input"
+      </div>
+        <section class="challenger_2_input">r
         <label for="challenger_2_name"> Name
           <input 
             type="text" 
@@ -79,6 +85,9 @@
             name="challenger_2_name"
           >
         </label>
+      </section>
+      <section class="two_guess">
+
         <label for="challenger_2_guess"> Guess
           <input 
             type="number" 
@@ -95,7 +104,9 @@
           value="Submit Guess" 
           class="button"
           id="submit_guess"
+          onclick="submitForms();" 
         >
+        <!-- JS^ -->
         <input 
           type="submit" 
           name="reset_game" 
@@ -108,20 +119,22 @@
           name="clear_game" 
           value="Clear Game" 
           class="button"
-          id="clear_game"
+          id="clear_game" 
+          onclick="ClearFields();"
         > 
+        <!-- JS^ -->
       </div>
     </div>
       <div class ="latest_score">
         <section class="challenger_1_current_guess">
-          <h3>Latest Score</h3>
+          <h3> Latest Score </h3>
           <h4 id="challenger_1_name"></h4>
-          <p class="current_guess">current guess</p>
+          <p class="current_guess"> current guess </p>
         </section>
         <section class="challenger_2_current_guess">
-          <h3>Latest Score</h3>
+          <h3> Latest Score </h3>
           <h4 id="challenger_2_name"></h4>
-          <p class="current_guess">current guess</p>
+          <p class="current_guess"> current guess </p>
         </section>
       </div>
     </div>
