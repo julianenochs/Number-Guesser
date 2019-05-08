@@ -155,6 +155,7 @@ input.challenger_input {
 	display: block;
 	height: 25px;
 	border: solid 2px #D0D2D3;
+	width: 250px;
 }
 
 .current_range form {
