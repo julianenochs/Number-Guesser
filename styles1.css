@@ -73,7 +73,7 @@ label,
  {
 	font-family: 'Open Sans', sans-serif; 
 	font-weight: 300;
-/* 	display: block; */
+ 	display: block; 
 }
 
 input {
@@ -152,6 +152,9 @@ input#range {
 }
 
 /*Second Content Box on Left*/
+.current_range form {
+	padding: 0 0 0 20px;
+}
 
 .latest_score {
 	display: flex;
@@ -176,6 +179,11 @@ input#range {
 	flex-direction: column;
 }
 
+.challenger_buttons {
+	display: flex;
+	justify-content: space-around;
+}
+
 .button {
 	background-color: #D0D2D3;
 	border-radius: 10px;
@@ -184,6 +192,10 @@ input#range {
 	font-size: 20px;
 	height: 40px;
 	width: 150px;
+	border-radius: 17%/60%;
+	color: #FFFFFF;
+	height: 20px;
+	text-align: center;
 }
 
 .button:visited {
