@@ -1,8 +1,6 @@
 /** {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  border: red 1px solid;
+  /*border: red 1px solid;*/
 }
 */
 body {
@@ -14,14 +12,18 @@ body {
 
 header {
 	background-color: #404042;
+	display: inline flex;
 	text-align: center;
 	margin-left: -8px;
+	margin-top: -33px;
+    padding-bottom: 10px;
+
 }
 
 h1 {
 	color: #DD1972;
 	font-family: 'Open Sans', sans-serif; 
-	/*font-size: 50px;*/
+	font-size: 50px;
 	font-style: bold;
 }
 
@@ -38,6 +40,7 @@ h2 {
     position: relative;
     overflow: hidden;
     width: 50%;
+    font-size: 30px;
 
 }
 
@@ -82,6 +85,7 @@ form.range_form {
 	display: flex;
 }
 
+/*Flex Boxes*/
 .min_range_input,
 .max_range_input,
 .challenger_form,
@@ -97,33 +101,39 @@ form.range_form {
 	display: flex;
 }
 
+/*Left Side of Game*/
+
 .left {
 	background-color: #F7F7F7;
 	float: left;
 	width: 50%;
 	display: flex;
 	flex-direction: column;
+	justify-content: space-between;
 }
+
+/*First Content Box on Left*/
 
 .set_range {
 	color: #6E6E6E;
-	display: inline flex;
+	display: flex;
 	height: 15vh;
 	flex-direction: column;
 	border: solid #D0D2D3;
-	margin: 30px 30px 30px 30px;
+	margin: 30px 30px 45px 30px;
 	background-color: white;
 	padding: 0px 25px 0px 25px;	
 }
 
 input#range {
-	width: 200px;
-	height: 20px;
+	width: 250px;
+	height: 25px;
 	display: block;
+	border: solid 2px #D0D2D3;
 }
 .min_range_input {
 	display: flex;
-	padding: 0px 200px 0px 0px;
+	padding: 0px 240px 0px 0px;
 	width: 40px;
 }
 
@@ -135,6 +145,12 @@ input#range {
 	margin: 30px 30px 30px 30px;
 	padding: 0px 0px 20px 20px;
 }
+
+#set_range_button {
+	margin-left: 45px;
+}
+
+/*Second Content Box on Left*/
 
 .latest_score {
 	display: flex;
@@ -158,9 +174,12 @@ input#range {
 
 .button {
 	background-color: #D0D2D3;
-	border-radius: 15%;
+	border-radius: 10px;
 	color: #FFFFFF;
-	height: 20px;
+	font-style: bold;
+	font-size: 20px;
+	height: 40px;
+	width: 150px;
 }
 
 .button:visited {
@@ -173,9 +192,13 @@ input#range {
 	color: white;
 }
 
+/*Third Box of Content*/
+
 .current_guess {
 	font-weight: 300;
 }
+
+/*Right side of game*/
 
 .right {
 	background-color: #404041;
