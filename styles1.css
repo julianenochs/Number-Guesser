@@ -119,11 +119,11 @@ form.range_form {
 
 .set_range {
 	color: #6E6E6E;
-	display: flex;
-	height: 15vh;
+	display: inline flex;
+	height: 20vh;
 	flex-direction: column;
 	border: solid #D0D2D3;
-	margin: 30px 30px 45px 30px;
+	margin: 30px 30px 0px 30px;
 	background-color: white;
 	padding: 0px 25px 0px 25px;	
 	width: 93%;
@@ -159,7 +159,7 @@ input.range {
 	background-color: white;
 	height: 45vh;
 	border: solid 2px #D0D2D3;
-	margin: 30px 30px 45px 30px;
+	margin: 30px 30px 0px 30px;
 	padding: 0px;
 	width: 93%;
 }
@@ -259,8 +259,11 @@ input.challenger_guess{
 /***************** Right Side Content ***********************/
 
 .right {
-	background-color: #404041;
+	background-color: red;
 	float: right;
 	display: flex;
+	height: 80%;
 }
+
+
 
