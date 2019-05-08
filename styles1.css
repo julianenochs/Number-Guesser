@@ -120,6 +120,9 @@ form.range_form {
 	padding: 0px 25px 0px 25px;	
 }
 
+label {
+	font-size: 18px;
+}
 
 .min_range_input {
 	display: flex;
@@ -135,27 +138,39 @@ input.range {
 	border: solid 2px #D0D2D3;
 }
 
-#set_range_button {
+#set_range {
 	margin-left: 45px;
 }
 
 .current_range {
 	display: flex;
 	flex-direction: column;
-	/*justify-content: center;*/
 	background-color: white;
 	height: 45vh;
 	border: solid 2px #D0D2D3;
 	margin: 30px 30px 30px 30px;
-/*	padding: 0px 0px 20px 20px;*/
-
 }
 
 input.challenger_input {
 	display: block;
-	height: 25px;
+	height: 35px;
 	border: solid 2px #D0D2D3;
-	width: 250px;
+	width: 430px;
+}
+
+input.challenger_guess{
+	display: block;
+	height: 35px;
+	border: solid 2px #D0D2D3;
+	width: 270px;
+
+}
+.challenger1 {
+	padding: 0px 20px 0px 0px;
+}
+
+.challenger2 {
+	padding: 0px 20px 0px 0px;
 }
 
 .current_range form {
@@ -204,6 +219,7 @@ input.challenger_input {
 	border-radius: 10px;
 	color: #FFFFFF;
 	height: 20px;
+	font-size: 20px;
 	text-align: center;
 	height: 40px;
 	width: 150px;
