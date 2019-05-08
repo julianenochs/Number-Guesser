@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-/*  border: red 1px solid;*/
+  border: red 1px solid;
 }
 
 body {
@@ -100,7 +100,7 @@ form.range_form {
 	width: 50%;
 	display: flex;
 	flex-direction: column;
-	height: 100%;
+/*	height: 100%;*/
 	padding:10px;
 }
 
@@ -236,8 +236,36 @@ input.challenger_guess{
 /***************** Right Side Content ***********************/
 
 .right {
-	background-color: red;
+	background-color: gray;
 	display: flex;
+	flex-direction: column;	
 	width: 50%;
 	padding:10px;
+}
+
+.card_1 {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 225px;
+	width: 100%;
+	background-color: white;
+}
+
+.card_1 p {
+	margin: 0;
+}
+
+.winner_name, .winner {
+	text-align: center;
+}
+
+.top_of_card {
+	display: inline;
+	text-align: center;	
+}
+
+.bottom_of_card {
+	width: 100%;
+	display: inline;
 }
