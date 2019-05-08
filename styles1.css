@@ -113,8 +113,7 @@ form.range_form {
 	border: solid #D0D2D3;
 	margin: 30px 30px 30px 30px;
 	background-color: white;
-	padding: 0px 25px 0px 25px;
-	
+	padding: 0px 25px 0px 25px;	
 }
 
 .current_range {
@@ -124,7 +123,6 @@ form.range_form {
 	border: solid 2px #D0D2D3;
 	margin: 30px 30px 30px 30px;
 	padding: 0px 0px 20px 20px;
-
 }
 
 .latest_score {
