@@ -254,6 +254,8 @@ input.challenger_guess{
 	width: 100%;
 	background-color: white;
 	padding: 0 25px 0 25px;
+	color: #6E6E6E;
+	font-weight: 300;
 }
 
 .card_1 p {
@@ -286,6 +288,14 @@ input.challenger_guess{
 
 .winner_name, .winner {
 	font-size: 2em;
+}
+
+.winner {
+	font-weight: 300;
+}
+
+.gray {
+	color: #6E6E6E
 }
 
 .bottom_of_card_p {
