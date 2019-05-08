@@ -20,9 +20,9 @@ header {
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-    width: 100%;
-    margin: 0px;
-    height:20%;
+  width: 100%;
+  margin: 0px;
+  height:20%;
 }
 
 h1 {
@@ -31,17 +31,16 @@ h1 {
 	margin: 0px;
 }
 
-
 h2 {
 	font-weight:300;
 	display: inline;
 	color: white;
 	font-size: 2em;
 	font-weight: 300;
-    text-align: center; 
-    position: relative;
-    overflow: hidden;
-    width: 50%;
+  text-align: center; 
+  position: relative;
+  overflow: hidden;
+  width: 50%;
     font-size: 30px;
 }
 
@@ -91,6 +90,7 @@ form.range_form {
 }
 
 /*************** Main Body Classes ********************/
+/*
 
 /********************** Left Side Content ************************/
 
@@ -130,7 +130,7 @@ label {
 
 .min_range_input {
 	margin-right: 20px; 
-	}
+}
 
 input.range {
 	width: 250px;
@@ -171,7 +171,6 @@ input.challenger_guess{
 	height: 35px;
 	border: solid 2px #D0D2D3;
 	width: 260px;
-
 }
 
 .challenger_2_input {
@@ -240,6 +239,94 @@ input.challenger_guess{
 /***************** Right Side Content ***********************/
 
 .right {
+	background-color: gray;
+	display: flex;
+	flex-direction: column;	
+	width: 50%;
+	padding:10px;
+}
+
+/***************** Card Style ***********************/
+
+
+.card_1 {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 225px;
+	width: 100%;
+	background-color: white;
+	padding: 0 25px 0 25px;
+	color: #6E6E6E;
+	font-weight: 300;
+}
+
+.card_1 p {
+	margin: 0;
+}
+
+.winner_name, .winner {
+	text-align: center;
+}
+
+.top_of_card {
+	display: inline;
+	text-align: center;	
+}
+
+.bottom_of_card {
+	display: inline;
+	padding-bottom: 10px;
+	border-top: solid 1px gray;
+}
+
+.top_of_card {
+	padding-top: 10px;
+	border-bottom: solid 1px gray;
+}
+
+.bold {
+	font-weight:700;
+}
+
+.winner_name, .winner {
+	font-size: 2em;
+}
+
+.winner {
+	font-weight: 300;
+}
+
+.gray {
+	color: #6E6E6E
+}
+
+.bottom_of_card_p {
+	padding-top: 5px;
+}
+
+.challenger_card_name {
+	padding-bottom: 5px;
+}
+
+.bottom_of_card >* {
+	display:inline-block;
+}
+
+.bottom_card_guess {
+	padding-right: 130px
+}
+
+ .bottom_card_time {
+ 	padding-right: 170px;
+ }
+
+.x_button {
+	padding-top: 5px;
+	height: 20px;
+	width: 20px;
+}
+=======
 	background-color: red;
 	display: flex;
 	width: 50%;
