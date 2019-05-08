@@ -71,7 +71,7 @@ label,
  {
 	font-family: 'Open Sans', sans-serif; 
 	font-weight: 300;
-/* 	display: block; */
+ 	display: block; 
 }
 
 input {
@@ -124,8 +124,12 @@ form.range_form {
 	background-color: white;
 	border: solid 2px #D0D2D3;
 	margin: 30px 30px 30px 30px;
-	padding: 0px 0px 20px 20px;
+/*	padding: 0px 0px 20px 20px;*/
 
+}
+
+.current_range form {
+	padding: 0 0 0 20px;
 }
 
 .challenger_form {
@@ -134,6 +138,7 @@ form.range_form {
 
 .challenger_2_input {
 	display: flex;
+	margin: 0 0 20px 0;
 }
 
 .latest_score {
@@ -159,11 +164,17 @@ form.range_form {
 	flex-direction: column;
 }
 
+.challenger_buttons {
+	display: flex;
+	justify-content: space-around;
+}
+
 .button {
 	background-color: #D0D2D3;
-	border-radius: 15%;
+	border-radius: 17%/60%;
 	color: #FFFFFF;
 	height: 20px;
+	text-align: center;
 }
 
 .button:visited {
