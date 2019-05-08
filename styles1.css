@@ -15,16 +15,16 @@ header {
 	display: inline flex;
 	text-align: center;
 	margin-left: -8px;
-	margin-top: -33px;
+	padding-bottom: 10px;
+	margin-top: -60px;
     padding-bottom: 10px;
-
 }
 
 h1 {
-	color: #DD1972;
+	color: #EC458B;
 	font-family: 'Open Sans', sans-serif; 
-	font-size: 50px;
-	font-style: bold;
+	font-size: 90px;
+	margin-bottom: 0px;
 }
 
 span {
@@ -41,7 +41,6 @@ h2 {
     overflow: hidden;
     width: 50%;
     font-size: 30px;
-
 }
 
 h2:before, h2:after {
@@ -86,6 +85,7 @@ form.range_form {
 }
 
 /*Flex Boxes*/
+
 .min_range_input,
 .max_range_input,
 .challenger_form,
