@@ -1,32 +1,30 @@
-/** {
+* {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  border: red 1px solid;
-}
-*/
+/*  border: red 1px solid;
+*/}
+
 body {
 	width: 100%;
-	box-sizing: border-box;
+	height: 100vh;		
 }
 
 /********** Header *****************/
 
 header {
 	background-color: #404042;
-	display: inline flex;
-	text-align: center;
-	margin-left: -8px;
-	padding-bottom: 10px;
-	margin-top: -60px;
-    padding-bottom: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+    width: 100%;
+    margin: 0px;
 }
 
 h1 {
 	color: #EC458B;
 	font-family: 'Open Sans', sans-serif; 
-	font-size: 90px;
-	margin-bottom: 0px;
+	font-size: 4em;
+	margin: 0px;
 }
 
 span {
@@ -36,6 +34,7 @@ span {
 h2 {
 	display: inline;
 	color: white;
+	font-size: 2em;
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 300;
     text-align: center; 
@@ -60,10 +59,11 @@ h2:before {
 	text-align: right;
 }
 
-/************* Main Body ********************/
+/************* Main Body Elements ********************/
 
 main {
 	font-family: 'Open Sans', sans-serif; 
+	width: 100%;
 }
 
 h3 {
@@ -86,6 +86,8 @@ form.range_form {
 	display: flex;
 }
 
+/*************** Main Body Classes ********************/
+
 .min_range_input,
 .max_range_input,
 .challenger_form,
@@ -101,13 +103,19 @@ form.range_form {
 	display: flex;
 }
 
+/********************** Left Side Content ************************/
+
 .left {
 	background-color: #F7F7F7;
 	float: left;
 	width: 50%;
 	display: flex;
 	flex-direction: column;
+	margin-left: -1%;
+	height: 80%;
 }
+
+/***************** First Box Content ***********************/
 
 .set_range {
 	color: #6E6E6E;
@@ -118,6 +126,7 @@ form.range_form {
 	margin: 30px 30px 45px 30px;
 	background-color: white;
 	padding: 0px 25px 0px 25px;	
+	width: 93%;
 }
 
 label {
@@ -127,9 +136,9 @@ label {
 .min_range_input {
 	display: flex;
 	padding: 0px 10px 0px 0px;
-/*	width: 100px;
-	height: 40px;
-*/}
+	/*width: 100px;*/
+	/*height: 40px;*/
+}
 
 input.range {
 	width: 200px;
@@ -142,13 +151,17 @@ input.range {
 	margin-left: 45px;
 }
 
+/***************** Second Box Content ***********************/
+
 .current_range {
 	display: flex;
 	flex-direction: column;
 	background-color: white;
 	height: 45vh;
 	border: solid 2px #D0D2D3;
-	margin: 30px 30px 30px 30px;
+	margin: 30px 30px 45px 30px;
+	padding: 0px;
+	width: 93%;
 }
 
 input.challenger_input {
@@ -162,7 +175,7 @@ input.challenger_guess{
 	display: block;
 	height: 35px;
 	border: solid 2px #D0D2D3;
-	width: 270px;
+	width: 100%;
 
 }
 .challenger1 {
@@ -186,6 +199,9 @@ input.challenger_guess{
 	margin: 0 0 20px 0;
 }
 
+/***************** Third Box Content ***********************/
+
+
 .latest_score {
 	display: flex;
 	justify-content: space-around;
@@ -193,6 +209,7 @@ input.challenger_guess{
 	border: solid 2px #D0D2D3;
 	margin: 30px 30px 30px 30px;
 	padding: 60px 0 60px 0;
+	width: 93%;
 }
 
 .challenger_1_current_guess {
@@ -238,6 +255,8 @@ input.challenger_guess{
 .current_guess {
 	font-weight: 300;
 }
+
+/***************** Right Side Content ***********************/
 
 .right {
 	background-color: #404041;
