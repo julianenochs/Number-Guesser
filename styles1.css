@@ -1,11 +1,14 @@
 * {
   box-sizing: border-box;
-/*  border: red 1px solid;
-*/}
+/*  border: red 1px solid;*/
+}
 
 body {
 	width: 100%;
-	height: 100vh;		
+	height: 100%;	
+	font-family: 'Open Sans', sans-serif;
+	display:flex;
+	flex-wrap:wrap;
 }
 
 /********** Header *****************/
@@ -16,31 +19,29 @@ header {
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-    width: 100%;
-    margin: 0px;
+  width: 100%;
+  margin: 0px;
+  height:20%;
 }
 
 h1 {
 	color: #EC458B;
-	font-family: 'Open Sans', sans-serif; 
 	font-size: 4em;
 	margin: 0px;
 }
 
-span {
-	font-weight: 300;
-}
 
 h2 {
+	font-weight:300;
 	display: inline;
 	color: white;
 	font-size: 2em;
-	font-family: 'Open Sans', sans-serif;
+	
 	font-weight: 300;
-    text-align: center; 
-    position: relative;
-    overflow: hidden;
-    width: 50%;
+  text-align: center; 
+  position: relative;
+  overflow: hidden;
+  width: 50%;
     font-size: 30px;
 }
 
@@ -62,8 +63,11 @@ h2:before {
 /************* Main Body Elements ********************/
 
 main {
-	font-family: 'Open Sans', sans-serif; 
-	width: 100%;
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  height: 80%;
+
 }
 
 h3 {
@@ -73,60 +77,42 @@ h3 {
 input,
 label,
  {
-	font-family: 'Open Sans', sans-serif; 
 	font-weight: 300;
  	display: block; 
 }
 
 input {
-	padding-left: 3px;
+
 }
 
 form.range_form {
-	display: flex;
+
 }
 
 /*************** Main Body Classes ********************/
+/*
 
-.min_range_input,
-.max_range_input,
-.challenger_form,
-.challenger_1_h3,
-.challenger_1_input,
-.one_guess, 
-.challenger_2_h2,
-.challenger_2_input,
-.two_guess,
-.challenger_buttons,
-.challenger_1_current_guess,
-.challenger_2_current_guess {
-	display: flex;
-}
 
 /********************** Left Side Content ************************/
 
 .left {
 	background-color: #F7F7F7;
-	float: left;
 	width: 50%;
 	display: flex;
 	flex-direction: column;
-	margin-left: -1%;
-	height: 80%;
+	height: 100%;
+	padding:10px;
 }
 
 /***************** First Box Content ***********************/
 
 .set_range {
 	color: #6E6E6E;
-	display: flex;
-	height: 15vh;
+	height: 25%;
 	flex-direction: column;
 	border: solid #D0D2D3;
-	margin: 30px 30px 45px 30px;
 	background-color: white;
-	padding: 0px 25px 0px 25px;	
-	width: 93%;
+	width: 100%;
 }
 
 label {
@@ -135,9 +121,6 @@ label {
 
 .min_range_input {
 	display: flex;
-	padding: 0px 10px 0px 0px;
-	/*width: 100px;*/
-	/*height: 40px;*/
 }
 
 input.range {
@@ -148,7 +131,6 @@ input.range {
 }
 
 #set_range {
-	margin-left: 45px;
 }
 
 /***************** Second Box Content ***********************/
@@ -157,11 +139,10 @@ input.range {
 	display: flex;
 	flex-direction: column;
 	background-color: white;
-	height: 45vh;
+	height: 50%
 	border: solid 2px #D0D2D3;
-	margin: 30px 30px 45px 30px;
 	padding: 0px;
-	width: 93%;
+	width: 100%;
 }
 
 input.challenger_input {
@@ -179,15 +160,12 @@ input.challenger_guess{
 
 }
 .challenger1 {
-	padding: 0px 20px 0px 0px;
 }
 
 .challenger2 {
-	padding: 0px 20px 0px 0px;
 }
 
 .current_range form {
-	padding: 0 0 0 20px;
 }
 
 .challenger_form {
@@ -196,7 +174,6 @@ input.challenger_guess{
 
 .challenger_2_input {
 	display: flex;
-	margin: 0 0 20px 0;
 }
 
 /***************** Third Box Content ***********************/
@@ -207,9 +184,9 @@ input.challenger_guess{
 	justify-content: space-around;
 	background-color: white;
 	border: solid 2px #D0D2D3;
-	margin: 30px 30px 30px 30px;
-	padding: 60px 0 60px 0;
-	width: 93%;
+	padding: 10px
+	width: 100%;
+	height:25%;
 }
 
 .challenger_1_current_guess {
@@ -259,8 +236,9 @@ input.challenger_guess{
 /***************** Right Side Content ***********************/
 
 .right {
-	background-color: #404041;
-	float: right;
+	background-color: red;
 	display: flex;
+	width: 50%;
+	padding:10px;
 }
 
