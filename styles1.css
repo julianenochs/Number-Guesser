@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  border: red 1px solid;
+/*  border: red 1px solid;*/
 }
 
 body {
@@ -243,6 +243,9 @@ input.challenger_guess{
 	padding:10px;
 }
 
+/***************** Card Style ***********************/
+
+
 .card_1 {
 	display: flex;
 	flex-direction: column;
@@ -250,6 +253,7 @@ input.challenger_guess{
 	height: 225px;
 	width: 100%;
 	background-color: white;
+	padding: 0 25px 0 25px;
 }
 
 .card_1 p {
@@ -266,6 +270,46 @@ input.challenger_guess{
 }
 
 .bottom_of_card {
-	width: 100%;
 	display: inline;
+	padding-bottom: 10px;
+	border-top: solid 1px gray;
+}
+
+.top_of_card {
+	padding-top: 10px;
+	border-bottom: solid 1px gray;
+}
+
+.bold {
+	font-weight:700;
+}
+
+.winner_name, .winner {
+	font-size: 2em;
+}
+
+.bottom_of_card_p {
+	padding-top: 5px;
+}
+
+.challenger_card_name {
+	padding-bottom: 5px;
+}
+
+.bottom_of_card >* {
+	display:inline-block;
+}
+
+.bottom_card_guess {
+	padding-right: 130px
+}
+
+ .bottom_card_time {
+ 	padding-right: 170px;
+ }
+
+.x_button {
+	padding-top: 5px;
+	height: 20px;
+	width: 20px;
 }
