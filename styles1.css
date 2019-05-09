@@ -136,10 +136,11 @@ input.range {
 	width: 250px;
 	height: 30px;
 	display: block;
-	border: solid 2px #D0D2D3;
+	border: solid 2px #F3F3F3;
 }
 
 #set_range {
+	font-weight: 500;
 	margin-left: 80px;
 	margin-top: 15px;
 }
@@ -155,21 +156,30 @@ input.range {
 	padding: 0px 25px 0px 25px;
 }
 
+.current_range_head {
+	font-size: 19px;
+}
+
+.number {
+	    text-decoration: underline;
+	    font-weight: bold;
+}
+
 .challenger_1_input {
 	display: flex;
 }
 input.challenger_input {
-	display: block;
+	display: block flex;
 	height: 35px;
-	border: solid 2px #D0D2D3;
+	border: solid 2px #F3F3F3;
 	width: 460px;
 	margin-right: 15px;
 }
 
 input.challenger_guess{
-	display: block;
+	display: block flex;
 	height: 35px;
-	border: solid 2px #D0D2D3;
+	border: solid 2px #F3F3F3;
 	width: 260px;
 }
 
@@ -212,10 +222,11 @@ input.challenger_guess{
 
 .button {
 	background-color: #D0D2D3;
-	border-radius: 10px;
+	border-radius: 20px;
 	color: #FFFFFF;
 	height: 20px;
 	font-size: 20px;
+	font-weight: 500;
 	text-align: center;
 	height: 42px;
 	width: 170px;
@@ -239,7 +250,7 @@ input.challenger_guess{
 /***************** Right Side Content ***********************/
 
 .right {
-	background-color: gray;
+	background-color: #D1D2D4;
 	display: flex;
 	flex-direction: column;	
 	width: 50%;
@@ -286,7 +297,7 @@ input.challenger_guess{
 }
 
 .bold {
-	font-weight:700;
+	font-weight:800;
 }
 
 .winner_name, .winner {
@@ -314,11 +325,11 @@ input.challenger_guess{
 }
 
 .bottom_card_guess {
-	padding-right: 130px
+	padding-right: 30%;
 }
 
  .bottom_card_time {
- 	padding-right: 170px;
+ 	padding-right: 30%;
  }
 
 .x_button {
