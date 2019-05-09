@@ -268,7 +268,7 @@ input.challenger_guess{
 	margin: 0;
 }
 
-.winner_name, .winner {
+/*.winner_name, .winner {
 	text-align: center;
 }
 
@@ -321,7 +321,7 @@ input.challenger_guess{
 }
 
 .bottom_card_guess {
-	padding-right: 130px
+	padding-right: 130px;
 }
 
  .bottom_card_time {
@@ -332,7 +332,7 @@ input.challenger_guess{
 	padding-top: 5px;
 	height: 20px;
 	width: 20px;
-}
+}*/
 
 /***************** Card 2 ***********************/
 
@@ -355,7 +355,7 @@ input.challenger_guess{
 	margin: 0;
 }
 
-.winner_name, .winner {
+/*.winner_name, .winner {
 	text-align: center;
 }
 
@@ -408,18 +408,18 @@ input.challenger_guess{
 }
 
 .bottom_card_guess {
-	padding-right: 130px
+	padding-right: 130px;
 }
 
  .bottom_card_time {
  	padding-right: 170px;
- }
+ }*/
 
-.x_button {
+/*.x_button {
 	padding-top: 5px;
-	height: 20px;
-	width: 20px;
-}
+	height: 100px;
+	width: 100px;
+}*/
 
 /***************** Card 3 ***********************/
 
@@ -495,17 +495,18 @@ input.challenger_guess{
 }
 
 .bottom_card_guess {
-	padding-right: 130px
+	padding-right: 30%;
+	padding-left: 2%;
 }
 
  .bottom_card_time {
- 	padding-right: 170px;
+ 	padding-right: 33%;
  }
 
 .x_button {
-	padding-top: 5px;
-	height: 20px;
-	width: 20px;
+	height: 33px;
+	width: 25px;
+	padding-top: 10px;
 }
 =======
 	background-color: red;
