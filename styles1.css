@@ -190,20 +190,31 @@ input.challenger_guess{
 	border: solid #D0D2D3;
 	display: flex;
 	margin-bottom: 10px;
-	padding: 50px 0px 50px 0px;
+	padding: 20px 0px 20px 0px;
 	width: 100%;
+}
+
+.latest_score_head {
+	align-content: baseline;
+	color: #6E6E6E;
+	display: flex;
+	justify-content: flex-start;
+	font-size: 19px;
+	padding-left: 20px;
 }
 
 .challenger_1_current_guess {
 	border-right: 2px solid #D0D2D3;
 	display: flex;
 	flex-direction: column;
+	font-size: larger;
 	text-align: center;
 	width: 50%;
 }
 
 .challenger_2_current_guess {
 	flex-direction: column;
+	font-size: larger;
 	text-align: center;
 	width: 50%;
 }
