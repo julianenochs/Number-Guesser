@@ -9,25 +9,25 @@ var gameInputs = document.querySelectorAll('.game_input');
 
 	}
 
-// function clearInput() {  
-//    clearButton.getElementById('#clear_game').value = "";
-//    }
-// // ^^ this button actually just refreshes the page - prob needs a new (fun)ction
-// // but hard to say since we haven't got a random number generator yet.
+var minRange = document.querySelector('#min_range');
+var maxRange = document.querySelector('#max_range');
+var firstQ = document.querySelector('#lower_range');
+var secondQ = document.querySelector('#upper_range');
+updateButton = document.querySelector('#set_range');
+	
 
-// submitGuesses = function(){
-//     document.getElementById("#challenger_1_guess").submit();
-//     document.getElementById("#challeneger_2_guess").submit();
-// }
+updateButton.addEventListener('click', function(event){
+	var input = minRange.value;
+	var input_two = maxRange.value;
+	firstQ.innerText = input;
+	secondQ.innerText = input_two;
+	event.preventDefault();
+});
 
-// var minInt = document.querySelector()
+
+
 
 // function getRandomArbitrary(min, max) {
 //   return Math.random() * (max - min) + min;
 // }
 
-// Totally unsure if these will work so I'm leaving
-// comments in the HTML where JS 'links' are 
-
-
-// 
