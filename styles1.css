@@ -116,6 +116,7 @@ form.range_form {
 
 .range_form {
 	display: flex;
+	width: 100%;
 }
 
 label {
@@ -124,6 +125,7 @@ label {
 
 .min_range_input {
 	margin-right: 20px; 
+	width: 100%;
 }
 
 input.range {
@@ -137,6 +139,7 @@ input.range {
 	font-weight: 500;
 	margin-left: 80px;
 	margin-top: 15px;
+	width: 75%;
 }
 
 /***************** Second Box Content ***********************/
@@ -185,12 +188,12 @@ input.challenger_guess{
 
 /***************** Third Box Content ***********************/
 
-
 .latest_score {
 	background-color: white;
 	border: solid #D0D2D3;
 	display: flex;
-	margin-bottom: 10px;
+	margin: 0px;
+	/*margin-bottom: 10px;*/
 	padding: 20px 0px 20px 0px;
 	width: 100%;
 }
@@ -201,6 +204,7 @@ input.challenger_guess{
 	display: flex;
 	justify-content: flex-start;
 	font-size: 19px;
+	margin: 0px;
 	padding-left: 20px;
 }
 
@@ -214,7 +218,10 @@ input.challenger_guess{
 }
 
 .challenger_2_current_guess {
+	display: flex;
 	flex-direction: column;
+	justify-content: space-between;
+	margin-top: 25px;
 	font-size: larger;
 	text-align: center;
 	width: 50%;
@@ -415,5 +422,12 @@ input.challenger_guess{
 	width: 25px;
 	padding-top: 10px;
 }
+/*
+@media (max-width: 1486px) {
+	.range_form {
+		display: flex;
+		flex-direction: column;
+	}
+}*/
 
 /******* classes for styling and IDs for JS *******/
