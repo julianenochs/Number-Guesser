@@ -1,39 +1,61 @@
 <!DOCTYPE html>
 <html>
 <head>
- <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800" rel="stylesheet">  <link rel="stylesheet" type="text/css" href="styles1.css">
-  <link rel="stylesheet" type="text/css" href="styles1.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800" rel="stylesheet">  
+  <link 
+    rel="stylesheet" 
+    type="text/css" 
+    href="styles1.css"
+  >
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Number Guesser</title>
+  <title>
+    Number Guesser
+  </title>
 </head>
 <body>
   <header>
-    <h1 class="heading">NUMBER <span>GUESSER</span></h1>
-    <h2><span class="line-space"> </span> Ultimate Challenger Edition  <span class="line-space">  </span></h2>
+    <h1 class="heading">
+      NUMBER 
+        <span>
+          GUESSER
+        </span>
+    </h1>
+    <h2>
+      <span class="line-space"> 
+      </span> 
+        Ultimate Challenger Edition  
+      <span class="line-space">  
+      </span>
+    </h2>
   </header>
   <main>
     <section class="left">
       <div class="set_range">
-        <h3 class="set_range_h3">Set Range</h3>
+        <h3 class="set_range_h3">
+          Set Range
+        </h3>
         <form class="range_form">
           <section class="min_range_input">
-          <label for="min_range"> Min Range
+            <label for="min_range"> 
+              Min Range
           <input
           type="Number"
           id="min_range"
           name="min_range"
-          class="range">
+          class="range"
+          >
           </label>
         </section>
         <section class="max_range_input">
-        <label for="max_range"> Max Range
+          <label for="max_range"> 
+            Max Range
           <input 
             type="Number" 
             id="min_range" 
             name="max_range"
             class="range"
           >
-        </label>
+          </label>
         </section>
         <input 
           type="submit" 
@@ -46,53 +68,70 @@
       </div>
       <div class="current_range">
       <form>
-        <p>The Current Range is <span id="lower_range">?</span> to <span id="upper_range"></span>?</p>
-      <div class="challenger_form">
-        <h3>Challenger 1</h3>
+        <p class="current_range_head">
+          The Current Range is 
+          <span class="number" id="lower_range">
+            ?
+          </span> 
+            to 
+          <span class = "number" id="upper_range">
+            ?
+          </span>
+        </p>
+        <div class="challenger_form">
+          <h3>
+            Challenger 1
+          </h3>
         </div>
         <section class="challenger_1_input">
           <div class="challenger1">
-        <label for="challenger_1_name"> Name
-          <input 
-            type="text" 
-            id="challenger_1_name" 
-            name="challenger_1_name"
-            class="challenger_input game_input"
-          >
-        </div>
+            <label for="challenger_1_name"> 
+              Name
+              <input 
+                type="text" 
+                id="challenger_1_name" 
+                name="challenger_1_name"
+                class="challenger_input game_input"
+              >
+            </label>
+          </div>
+          <label for="challenger_1_guess"> 
+            Guess
+              <input 
+                type="number" 
+                id="challenger_1_guess"
+                name="challenger_1_guess"
+                class="challenger_guess game_input"
+              >
         </label>
-        <label for="challenger_1_guess"> Guess
-          <input 
-            type="number" 
-            id="challenger_1_guess"
-            name="challenger_1_guess"
-            class="challenger_guess game_input"
-          >
-        </label>
-      </section>
-        <h3>Challenger 2</h3>
+        </section>
+        <h3>
+          Challenger 2
+        </h3>
         <section class="challenger_2_input">
-        <div class="challenger2">
-        <label for="challenger_2_name"> Name
-          <input 
-            type="text" 
-            id="challenger_2_name" 
-            name="challenger_2_name"
-            class="challenger_input game_input"
-          >
-        </label>
-      </div>
-        <label for="challenger_2_guess"> Guess
-          <input 
-            type="number" 
-            id="challenger_2_guess"
-            name="challenger_2_guess"
-            class="challenger_guess game_input"
-          >
-        </label>
-      </section>
+          <div class="challenger2">
+            <label for="challenger_2_name"> 
+              Name
+              <input 
+                type="text" 
+                id="challenger_2_name" 
+                name="challenger_2_name"
+                class="challenger_input game_input"
+              >
+            </label>
+          </div>
+          <label for="challenger_2_guess"> 
+            Guess
+            <input 
+              type="number" 
+              id="challenger_2_guess"
+              name="challenger_2_guess"
+              class="challenger_guess game_input"
+            >
+          </label>
+        </section>
       </form>
-       <div class="challenger_buttons">
+      <div class="challenger_buttons">
         <input 
           type="submit" 
           name="submit_guess" 
@@ -116,17 +155,31 @@
         > 
       </div>
     </div>
-       <div class ="latest_score">
+      <div class ="latest_score">
         <section class="challenger_1_current_guess">
-          <h3>Latest Score</h3>
-          <h4 id="challenger_1_name">Challenger 1 Name</h4>
-          <p class="current_guess">current guess</p>
-          <p>?</p>
+          <h3 class="latest_score_head">
+            Latest Score
+          </h3>
+          <h4 id="challenger_1_name">
+            Challenger 1 Name
+          </h4>
+          <p class="current_guess">
+            current guess
+          </p>
+          <p>
+            ?
+          </p>
         </section>
         <section class="challenger_2_current_guess">
-          <h4 id="challenger_2_name">Challenger 2 Name</h4>
-          <p class="current_guess">current guess</p>
-          <p> ? </p>
+          <h4 id="challenger_2_name">
+            Challenger 2 Name
+          </h4>
+          <p class="current_guess">
+            current guess
+          </p>
+          <p> 
+            ? 
+          </p>
         </section>
       </div>
     </div>
@@ -134,13 +187,40 @@
     <section class="right">
       <section class="card_1">
         <div class="top_of_card">
+          <p class="challenger_card_name">
+            <span class="bold">
+              Challenger 1 name
+            </span>
+             vs 
+            <span class="bold">
+              Challenger 2 name
+            </span>
           <p class="challenger_card_name"><span class="bold">CHALLENGER 1 NAME</span> <span class="vs">vs</span> <span class="bold">CHALLENGER 2 NAME</span>
         </div>
         <div class="middle_of_card">
-          <p class="winner_name bold">CHALLENGER 2 NAME</p>
-          <p class="winner">WINNER</p>
+          <p class="winner_name bold">
+            CHALLENGER 2 NAME
+          </p>
+          <p class="winner">
+            WINNER
+          </p>
         </div>
         <div class="bottom_of_card">
+          <p class="bottom_card_guess">
+            <span class="bold">
+              23
+            </span>
+              guesses
+          </p> 
+          <p class="bottom_card_time">
+            <span class="bold">
+              1.35
+            </span>
+               minutes
+          </p>
+          <div class="bottom_card_image">
+            <img class="x_button" src="https://www.freeiconspng.com/uploads/white-close-button-png-16.png">
+          <div>
           <p class="bottom_card_guess"><span class="bold">23</span> GUESSES</p> 
           <p class="bottom_card_time"><span class="bold">1.35</span> MINUTES</p>
           <div class="bottom_card_image"><img class="x_button" src="https://www.freeiconspng.com/uploads/white-close-button-png-16.png"><div>
@@ -176,6 +256,7 @@
       </section>
     </section>
   </main>
-  <script type="text/javascript" src="javascript.js"></script>
+  <script type="text/javascript" src="javascript.js">
+  </script>
 </body>
 </html>
