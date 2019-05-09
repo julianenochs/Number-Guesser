@@ -259,8 +259,9 @@ input.challenger_guess{
 	padding: 0 25px 0 25px;
 	color: #7F7F7F;
 	font-weight: 300;
-	margin: 1% auto 20px auto;
+	margin: 1% auto 10px auto;
 	height: 250px;
+	border: 2px solid #AAAAAA;
 }
 
 .card_1 p {
@@ -345,8 +346,9 @@ input.challenger_guess{
 	padding: 0 25px 0 25px;
 	color: #7F7F7F;
 	font-weight: 300;
-	margin: 1% auto 20px auto;
+	margin: 1% auto 10px auto;
 	height: 250px;
+	border: 2px solid #AAAAAA;
 }
 
 .card_2 p {
@@ -433,6 +435,7 @@ input.challenger_guess{
 	font-weight: 300;
 	margin: 1% auto 0 auto;
 	height: 250px;
+	border: 2px solid #AAAAAA;
 }
 
 .card_3 p {
