@@ -62,11 +62,6 @@ function compareGuess(guess, element, boomElement) {
 
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f232380e14dddcb9ee8b954466a1154da106eb73
 resetButton.addEventListener('click', function() {
 	clearInput();
 	player_one_head.innerText = 'Challenger 1 Name';
@@ -78,15 +73,7 @@ resetButton.addEventListener('click', function() {
 	genRandomNumber();
 });
 
-<<<<<<< HEAD
 
-// ---- these functions below don't work, we can generate a random number, but not between two variables.
-
-// updateButton.addEventListener('click', updateRange);
-
->>>>>>> 7720b7c796e84046a7a6c71e893b457058af0cbf
-=======
->>>>>>> f232380e14dddcb9ee8b954466a1154da106eb73
 function genRandomNumber(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
