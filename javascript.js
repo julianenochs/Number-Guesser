@@ -21,6 +21,7 @@ var tooTwo = document.querySelector('#too_two');
 var boomOne = document.querySelector('#boomOne');
 var boomTwo = document.querySelector('#boomTwo');
 var randomNumber = 0;
+var resetButton = document.querySelector('#reset_game')
 
 clearButton.addEventListener('click', clearInput)
 
@@ -61,6 +62,17 @@ function compareGuess(guess, element, boomElement) {
 
 }
 
+resetButton.addEventListener('click', function() {
+	clearInput();
+	player_one_head.innerText = 'Challenger 1 Name';
+	player_two_head.innerText = 'Challenger 2 Name';
+	guessOne.innerText = '?';
+	guessTwo.innerText = '?';
+	firstQ.innerText = '?';
+	secondQ.innerText = '?';
+	genRandomNumber();
+});
+
 
 // ---- these functions below don't work, we can generate a random number, but not between two variables.
 
@@ -70,6 +82,7 @@ function genRandomNumber(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min)) + min
+  console.log
 }
 
 // function updateRange() {
