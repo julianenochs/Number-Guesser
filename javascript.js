@@ -74,6 +74,7 @@ resetButton.addEventListener('click', function() {
 	console.log(randomNumber);
 });
 
+
 function genRandomNumber(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
