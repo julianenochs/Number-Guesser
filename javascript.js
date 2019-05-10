@@ -66,9 +66,12 @@ resetButton.addEventListener('click', function() {
 	clearInput();
 	player_one_head.innerText = 'Challenger 1 Name';
 	player_two_head.innerText = 'Challenger 2 Name';
-	guessOne.value = '?';
-	guessTwo.value = '?';
-})
+	guessOne.innerText = '?';
+	guessTwo.innerText = '?';
+	firstQ.innerText = '?';
+	secondQ.innerText = '?';
+	genRandomNumber();
+});
 
 
 // ---- these functions below don't work, we can generate a random number, but not between two variables.
@@ -79,6 +82,7 @@ function genRandomNumber(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min)) + min
+  console.log
 }
 
 // function updateRange() {
