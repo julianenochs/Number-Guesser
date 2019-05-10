@@ -71,6 +71,7 @@ resetButton.addEventListener('click', function() {
 	firstQ.innerText = '?';
 	secondQ.innerText = '?';
 	genRandomNumber();
+	console.log(randomNumber);
 });
 
 function genRandomNumber(min, max) {
