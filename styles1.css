@@ -208,6 +208,24 @@ input.challenger_guess{
 	padding-left: 20px;
 }
 
+.player_name {
+	color: grey;
+	font-weight: 700;
+}
+
+.current_guess_1,
+.current_guess_2 {
+	font-weight: 300;
+	font-size: 20px;
+}
+
+.pink_number {
+	color: #DD1972;
+	font-size: 140px;
+	font-weight: 700;
+	margin: 0;
+}
+
 .challenger_1_current_guess {
 	border-right: 2px solid #D0D2D3;
 	display: flex;
@@ -422,12 +440,12 @@ input.challenger_guess{
 	width: 25px;
 	padding-top: 10px;
 }
-/*
+
 @media (max-width: 1486px) {
 	.range_form {
 		display: flex;
 		flex-direction: column;
 	}
-}*/
+}
 
 /******* classes for styling and IDs for JS *******/
