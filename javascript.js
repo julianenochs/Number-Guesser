@@ -5,8 +5,6 @@ var maxRange = document.querySelector('#max_range');
 var firstQ = document.querySelector('#lower_range');
 var secondQ = document.querySelector('#upper_range');
 var updateButton = document.querySelector('#set_range');
-
-
 var playerOne = document.querySelector('#challenger_1_name');
 var playerTwo = document.querySelector('#challenger_2_name');
 var playerOneGuess = document.querySelector('#player_one_guess');
@@ -47,8 +45,9 @@ submitButton.addEventListener('click', function(event){
 	guessTwo.innerText = playerTwoGuess.value;
 	compareGuess(playerOneGuess.value, tooOne, boomOne);
 	compareGuess(playerTwoGuess.value, tooTwo, boomTwo);
+	// console.log(typeof(playerOneGuess.value));
+	// ** returned as a string
 })
-
 
 function compareGuess(guess, element, boomElement) {
 	if (guess < randomNumber) {
@@ -57,48 +56,13 @@ function compareGuess(guess, element, boomElement) {
 		element.innerText = 'high.'
 	} else {
 		boomElement.innerHTML = 'BOOM!'
+		element.innerText = ''
 	}
 
 }
-
-
-// ---- these functions below don't work, we can generate a random number, but not between two variables.
-
-// updateButton.addEventListener('click', updateRange);
 
 function genRandomNumber(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min)) + min
 }
-
-// function updateRange() {
-// 	 = parseInt(minRange.value);
-// 	 = parseInt(maxRange.value);
-// 	firstQ.innerText = ;
-// 	secondQ.innerText = ;
-// 	var winNum = genRandomNumber(min = , max = );
-// 	console.log(winNum);
-// }
-
-
-// function genRandomNumber(min, max) {
-//   return Math.floor(Math.random() * (maxRange.value - minRange.value +1)) + min;
-// }
-// function genRandomNumber(num1, num2) {
-//    return Math.floor(Math.random() * (maxRange.value - minRange.value +1)) + maxRange.value;
-// }
- 
-// window.onLoad = genRandomNumber();
-
-// parseInt for minRange, which is currently a string
-// var to parseInt to declare minRange 
-
-// function updateRange() {
-// 	lowRange = parseInt(minValueInput.value);
-// 	highRange = parseInt(maxValueInput.value);
-// 	minValueOutput.innerText = lowRange;
-// 	maxValueOutput.innerText = highRange;
-// 	winNum = generateRandomNumber(lowRange, highRange);
-// 		console.log(winNum);
-// }
