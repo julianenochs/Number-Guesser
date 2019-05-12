@@ -106,23 +106,21 @@ function resetNumber() {
 
 minRange.addEventListener('keyup', enableUpdateButton);
 maxRange.addEventListener('keyup', enableUpdateButton);
-playerOne.addEventListener('keyup', enableSubmitButton);
-playerTwo.addEventListener('keyup', enableSubmitButton);
-playerOneGuess.addEventListener('keyup', enableSubmitButton);
-playerTwoGuess.addEventListener('keyup', enablesSubmitButton);
+playerOne.addEventListener('keyup', enableSRC);
+playerTwo.addEventListener('keyup', enableSRC);
+playerOneGuess.addEventListener('keyup', enableSRC);
+playerTwoGuess.addEventListener('keyup', enablesSRC);
 
 function enableUpdateButton() {
 	event.preventDefault();
 	document.getElementById("set_range").disabled = false;
 }
 
-function enableSubmitButton() {
+function enableSRC() {
 	event.preventDefault();
-	document.getElementbyId("")
-}
-
-function enableResetButton() {
-	event.preventDefault("");
+	document.getElementById("submit_guess").disabled = false;
+	document.getElementById("reset_game").disabled = false;
+	document.getElementById("clear_game").disabled = false;
 }
 
 // document.getElementById("button").disabled = false;
