@@ -18,11 +18,10 @@ var tooOne = document.querySelector('#too_one');
 var tooTwo = document.querySelector('#too_two');
 var boomOne = document.querySelector('#boomOne');
 var boomTwo = document.querySelector('#boomTwo');
-var randomNumber = 0;
 var resetButton = document.querySelector('#reset_game')
+var randomNumber = 0;
 
 clearButton.addEventListener('click', clearInput)
-
 function clearInput() {
 	for (var i=0; i < gameInputs.length; i++) {
 		gameInputs[i].value = '';
@@ -46,14 +45,24 @@ submitButton.addEventListener('click', function(event){
 	guessTwo.innerText = playerTwoGuess.value;
 	compareGuess(playerOneGuess.value, tooOne, boomOne);
 	compareGuess(playerTwoGuess.value, tooTwo, boomTwo);
+
 	// console.log(typeof(playerOneGuess.value));
 	// ** returned as a string
 })
 
+function genRandomNumber(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min)) + min
+  console.log(genRandomNumber);
+}
+
 function compareGuess(guess, element, boomElement) {
-	if (guess < randomNumber) {
+	var guessNum = parseInt(guess);
+	console.log(typeof(guessNum));
+	if (guessNum < randomNumber) {
 		element.innerText = 'low.'
-	} else if (guess > randomNumber) {
+	} else if (guessNum > randomNumber) {
 		element.innerText = 'high.'
 	} else {
 		boomElement.innerHTML = 'BOOM!'
@@ -62,11 +71,6 @@ function compareGuess(guess, element, boomElement) {
 
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f232380e14dddcb9ee8b954466a1154da106eb73
 resetButton.addEventListener('click', function() {
 	clearInput();
 	player_one_head.innerText = 'Challenger 1 Name';
@@ -75,21 +79,5 @@ resetButton.addEventListener('click', function() {
 	guessTwo.innerText = '?';
 	firstQ.innerText = '?';
 	secondQ.innerText = '?';
-	genRandomNumber();
+	genRandomNumber(randomNumber);
 });
-
-<<<<<<< HEAD
-
-// ---- these functions below don't work, we can generate a random number, but not between two variables.
-
-// updateButton.addEventListener('click', updateRange);
-
->>>>>>> 7720b7c796e84046a7a6c71e893b457058af0cbf
-=======
->>>>>>> f232380e14dddcb9ee8b954466a1154da106eb73
-function genRandomNumber(min, max) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min)) + min
-  console.log
-}
