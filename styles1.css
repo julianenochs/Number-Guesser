@@ -82,9 +82,6 @@ label {
 	font-weight: 300;
 }
 
-form.range_form {
-}
-
 /********************** Left Side Content ************************/
 
 .left {
@@ -148,6 +145,8 @@ input.range {
 	color: #6E6E6E;
 	background-color: white;
 	border: solid #D0D2D3;
+	display: flex;
+	flex-direction: column;
 	height: 400px;
 	margin-bottom: 10px;
 	padding: 0px 25px 0px 25px;
@@ -163,13 +162,16 @@ input.range {
 	text-decoration: underline;
 }
 
-.challenger_1_input {
+.challenger_1_form,
+.challenger_2_form {
 	display: flex;
+	flex-direction: row;
 }
 
 input.challenger_input {
 	border: solid 2px #F3F3F3;
 	display: block flex;
+	flex-direction: row;
 	height: 35px;
 	margin-right: 15px;
 	width: 460px;
@@ -178,12 +180,9 @@ input.challenger_input {
 input.challenger_guess{
 	border: solid 2px #F3F3F3;
 	display: block flex;
+	flex-direction: row;
 	height: 35px;
 	width: 260px;
-}
-
-.challenger_2_input {
-	display: flex;
 }
 
 /***************** Third Box Content ***********************/
@@ -193,7 +192,6 @@ input.challenger_guess{
 	border: solid #D0D2D3;
 	display: flex;
 	margin: 0px;
-	/*margin-bottom: 10px;*/
 	padding: 20px 0px 20px 0px;
 	width: 100%;
 }
@@ -442,9 +440,30 @@ input.challenger_guess{
 }
 
 @media (max-width: 1486px) {
+	.set_range {
+		display: block flex;
+		height: 245px;
+		justify-content: flex-start;
+	}
+
 	.range_form {
 		display: flex;
 		flex-direction: column;
+	}
+	#set_range {
+		height: 42px;
+		width: 150px;
+	}
+}
+
+@media (max-width: 1577px) {
+	.challenger_1_form,
+	.challenger_2_form {
+		flex-direction: column;
+	}
+
+	.current_range {
+		height: 530px;
 	}
 }
 

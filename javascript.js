@@ -109,7 +109,7 @@ maxRange.addEventListener('keyup', enableUpdateButton);
 playerOne.addEventListener('keyup', enableSRC);
 playerTwo.addEventListener('keyup', enableSRC);
 playerOneGuess.addEventListener('keyup', enableSRC);
-playerTwoGuess.addEventListener('keyup', enablesSRC);
+playerTwoGuess.addEventListener('keyup', enableSRC);
 
 function enableUpdateButton() {
 	event.preventDefault();
