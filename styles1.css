@@ -101,7 +101,7 @@ label {
 	color: #6E6E6E;
 	background-color: white;
 	border: solid #D0D2D3;
-	height: 145px;
+	height: 165px;
 	margin: 1% auto 10px auto;
 	padding: 0px 25px 0px 25px;
 	width: 100%;
@@ -139,6 +139,11 @@ input.range {
 	width: 75%;
 }
 
+#submit_alert {
+	display: flex;
+	justify-content: flex-start;
+	color: #DD1972;
+}
 
 /***************** Second Box Content ***********************/
 
@@ -261,12 +266,16 @@ input.challenger_guess{
 	height: 42px;
 	margin-top: 30px;
 	text-align: center;
-	width: 170px;
+	width: 220px;
 }
 
 .button:visited {
 	background-color: #6E6E6E;
 	color: #FFFFFF;
+}
+
+.button:enabled {
+	background-color: #6E6E6E;
 }
 
 .button:hover:enabled {
@@ -441,9 +450,10 @@ input.challenger_guess{
 }
 
 @media (max-width: 1486px) {
+
 	.set_range {
 		display: block flex;
-		height: 245px;
+		height: 275px;
 		justify-content: flex-start;
 	}
 
@@ -451,21 +461,40 @@ input.challenger_guess{
 		display: flex;
 		flex-direction: column;
 	}
+
 	#set_range {
 		height: 42px;
-		width: 150px;
-		justify-content: flex-start;
+		width: 85%;
+	}
+
+	input.range {
+		width: 100%;
 	}
 }
 
 @media (max-width: 1577px) {
+	.current_range {
+		height: 645px;
+	}
+
+	.challenger_buttons {
+		display: flex;
+		flex-direction: column;
+}
+
+.button {
+	width: 100%;
+}
+
 	.challenger_1_form,
 	.challenger_2_form {
 		flex-direction: column;
 	}
 
-	.current_range {
-		height: 530px;
+	
+input.challenger_input,
+input.challenger_guess {
+	width: 100%;
 	}
 }
 
