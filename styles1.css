@@ -270,7 +270,7 @@ input.challenger_guess{
 	color: #FFFFFF;
 }
 
-.button:hover {
+.button:hover:enabled {
 	background-color: #DD1972;
 	color: white;
 }
@@ -399,7 +399,7 @@ input.challenger_guess{
 
 .bottom_of_card_p {
 	padding-top: 5px;
-}
+} 
 
 .challenger_card_name {
 	padding-bottom: 5px;
@@ -450,7 +450,6 @@ input.challenger_guess{
 
 /******* classes for styling and IDs for JS *******/
 
-input [type=submit]:disabled,
-buttond[disabled] {
+button:disabled {
 	background-color: #D0D2D3;
 }

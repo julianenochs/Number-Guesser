@@ -92,6 +92,47 @@ function resetNumber() {
 	event.preventDefault();
 };
 
+// minRange
+// maxRange
+// playerOne
+// playerTwo
+// playerOneGuess
+// playerTwoGuess
+
+// var enableUpdateButton = true;
+// var enableSubmitButton = true;
+// var enableResetButton = true;
+// var enableClearButton = true;
+
+minRange.addEventListener('keyup', enableUpdateButton);
+maxRange.addEventListener('keyup', enableUpdateButton);
+playerOne.addEventListener('keyup', enableSubmitButton);
+playerTwo.addEventListener('keyup', enableSubmitButton);
+playerOneGuess.addEventListener('keyup', enableSubmitButton);
+playerTwoGuess.addEventListener('keyup', enablesSubmitButton);
+
+function enableUpdateButton() {
+	event.preventDefault();
+	document.getElementById("set_range").disabled = false;
+}
+
+function enableSubmitButton() {
+	event.preventDefault();
+	document.getElementbyId("")
+}
+
+function enableResetButton() {
+	event.preventDefault("");
+}
+
+// document.getElementById("button").disabled = false;
+
+
+// enableButtons.addEventListener('keyup', enableResetButton);
+
+// function enableResetButton
+
+
 // var winnerCard = "<section class=\"card_1\">" +
 //         "<div class=\"top_of_card\">" +
 //           "<p class=\"challenger_card_name\">" +
