@@ -139,6 +139,7 @@ input.range {
 	width: 75%;
 }
 
+
 /***************** Second Box Content ***********************/
 
 .current_range {
@@ -453,6 +454,7 @@ input.challenger_guess{
 	#set_range {
 		height: 42px;
 		width: 150px;
+		justify-content: flex-start;
 	}
 }
 
