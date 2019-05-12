@@ -449,3 +449,8 @@ input.challenger_guess{
 }
 
 /******* classes for styling and IDs for JS *******/
+
+input [type=submit]:disabled,
+buttond[disabled] {
+	background-color: #D0D2D3;
+}
