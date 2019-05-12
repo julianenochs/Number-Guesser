@@ -29,7 +29,9 @@ function clearInput() {
 	}
 }
 
-updateButton.addEventListener('click', function(event){
+updateButton.addEventListener('click', updateNumber);
+
+function updateNumber() {
 	var input = minRange.value;
 	var input_two = maxRange.value;
 	firstQ.innerText = input;
@@ -37,7 +39,7 @@ updateButton.addEventListener('click', function(event){
 	randomNumber = genRandomNumber(input, input_two)
 	console.log(randomNumber);
 	event.preventDefault();
-});
+};
 	
 submitButton.addEventListener('click', function(event){
 	playerOneHead.innerText = playerOne.value 
@@ -70,13 +72,96 @@ resetButton.addEventListener('click', function() {
 	guessTwo.innerText = '?';
 	firstQ.innerText = '?';
 	secondQ.innerText = '?';
-	genRandomNumber();
+	resetNumber ();
 });
 
 
 function genRandomNumber(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min)) + min
-  console.log
+  return Math.floor(Math.random() * (max - min)) + min;
 }
+
+function resetNumber() {
+	var input = 1;
+	var input_two = 100;
+	firstQ.innerText = input;
+	secondQ.innerText = input_two;
+	randomNumber = genRandomNumber(input, input_two);
+	console.log(randomNumber);
+	event.preventDefault();
+};
+
+// minRange
+// maxRange
+// playerOne
+// playerTwo
+// playerOneGuess
+// playerTwoGuess
+
+// var enableUpdateButton = true;
+// var enableSubmitButton = true;
+// var enableResetButton = true;
+// var enableClearButton = true;
+
+minRange.addEventListener('keyup', enableUpdateButton);
+maxRange.addEventListener('keyup', enableUpdateButton);
+playerOne.addEventListener('keyup', enableSRC);
+playerTwo.addEventListener('keyup', enableSRC);
+playerOneGuess.addEventListener('keyup', enableSRC);
+playerTwoGuess.addEventListener('keyup', enablesSRC);
+
+function enableUpdateButton() {
+	event.preventDefault();
+	document.getElementById("set_range").disabled = false;
+}
+
+function enableSRC() {
+	event.preventDefault();
+	document.getElementById("submit_guess").disabled = false;
+	document.getElementById("reset_game").disabled = false;
+	document.getElementById("clear_game").disabled = false;
+}
+
+// document.getElementById("button").disabled = false;
+
+
+// enableButtons.addEventListener('keyup', enableResetButton);
+
+// function enableResetButton
+
+
+// var winnerCard = "<section class=\"card_1\">" +
+//         "<div class=\"top_of_card\">" +
+//           "<p class=\"challenger_card_name\">" +
+//           "<p class=\"challenger_card_name\"><span class=\"bold\">" + 
+//           "CHALLENGER 1 NAME</span> <span class=\"vs\">vs</span>" + 
+//           "<span> + {} class=\"bold\">CHALLENGER 2 NAME</span>" +
+//         "</div>" +
+//         "<div class=\"middle_of_card\">" +
+//           "<p class=\"winner_name bold\">" +
+//             "CHALLENGER 2 NAME" +
+//           "</p>"
+//           "<p class=\"winner\">" +
+//             "WINNER" +
+//           "</p>" +
+//         "</div>" +
+//         "<div class=\"bottom_of_card\">" +
+//           "<p class=\"bottom_card_guess\">" +
+//             "<span class=\"bold\">" +
+//           "23" +
+//             "</span>" +
+//                "GUESSES" +
+//           "</p>" +
+//           "<p class=\"bottom_card_time\">" +
+//             "<span class=\"bold\">" +
+//               "1.35" +
+//             "</span>" +
+//                "MINUTES" +
+//           "</p>" +
+//           "<div class=\"bottom_card_image\">" +
+//           "<img class=\"x_button\" src=" + 
+//           "\"https://www.freeiconspng.com/uploads/" +                    "white-close-button-png-16.png\">" +
+//           "<div>" +
+//         "</div>" +
+//       "</section>"
