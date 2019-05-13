@@ -20,18 +20,14 @@ var boomOne = document.querySelector('#boomOne');
 var boomTwo = document.querySelector('#boomTwo');
 var randomNumber = 0;
 var resetButton = document.querySelector('#reset_game')
+var submitGuessAlert = document.querySelector('#submit_alert')
 
 clearButton.addEventListener('click', clearInput)
-
-function clearInput() {
-	for (var i=0; i < gameInputs.length; i++) {
-		gameInputs[i].value = '';
-	}
-}
-
 updateButton.addEventListener('click', updateNumber);
 
+
 function updateNumber() {
+	validateUpdateButton();
 	var input = minRange.value;
 	var input_two = maxRange.value;
 	firstQ.innerText = input;
@@ -40,7 +36,22 @@ function updateNumber() {
 	console.log(randomNumber);
 	event.preventDefault();
 };
-	
+
+function validateUpdateButton() {
+	if (minRange.value === '' || maxRange.value === '') {
+	submitGuessAlert.innerText = 'Please fill out all fields';
+	} else {
+	submitGuessAlert.innerText = '';
+	}
+
+}
+
+function clearInput() {
+	for (var i=0; i < gameInputs.length; i++) {
+		gameInputs[i].value = '';
+	}
+}
+
 submitButton.addEventListener('click', function(event){
 	playerOneHead.innerText = playerOne.value 
 	playerTwoHead.innerText = playerTwo.value;
@@ -75,7 +86,6 @@ resetButton.addEventListener('click', function() {
 	resetNumber ();
 });
 
-
 function genRandomNumber(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
@@ -92,6 +102,24 @@ function resetNumber() {
 	event.preventDefault();
 };
 
+playerOne.addEventListener('keyup', enableSRC);
+playerTwo.addEventListener('keyup', enableSRC);
+playerOneGuess.addEventListener('keyup', enableSRC);
+playerTwoGuess.addEventListener('keyup', enableSRC);
+
+function enableSRC() {
+	event.preventDefault();
+	document.getElementById("submit_guess").disabled = false;
+	document.getElementById("reset_game").disabled = false;
+	document.getElementById("clear_game").disabled = false;
+}
+
+
+// function enableUpdateButton() {
+// 	event.preventDefault();
+// 	document.getElementById("set_range").disabled = false;
+// }
+
 // minRange
 // maxRange
 // playerOne
@@ -103,25 +131,6 @@ function resetNumber() {
 // var enableSubmitButton = true;
 // var enableResetButton = true;
 // var enableClearButton = true;
-
-minRange.addEventListener('keyup', enableUpdateButton);
-maxRange.addEventListener('keyup', enableUpdateButton);
-playerOne.addEventListener('keyup', enableSRC);
-playerTwo.addEventListener('keyup', enableSRC);
-playerOneGuess.addEventListener('keyup', enableSRC);
-playerTwoGuess.addEventListener('keyup', enablesSRC);
-
-function enableUpdateButton() {
-	event.preventDefault();
-	document.getElementById("set_range").disabled = false;
-}
-
-function enableSRC() {
-	event.preventDefault();
-	document.getElementById("submit_guess").disabled = false;
-	document.getElementById("reset_game").disabled = false;
-	document.getElementById("clear_game").disabled = false;
-}
 
 // document.getElementById("button").disabled = false;
 
