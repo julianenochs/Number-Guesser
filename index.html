@@ -58,15 +58,16 @@
           </label>
         </section>
         <input 
-          type="submit" 
+          type="button" 
           id="set_range" 
           name="set_range" 
           value="UPDATE"
           class="button"
         >
         </form>
+        <p id="submit_alert">  </p>
       </div>
-      <div class="current_range">
+      <section class="current_range">
       <form>
         <p class="current_range_head">
           The Current Range is 
@@ -78,13 +79,11 @@
             ?
           </span>
         </p>
-        <div class="challenger_form">
+        <section class="challenger_1">
           <h3>
             Challenger 1
           </h3>
-        </div>
-        <section class="challenger_1_input">
-          <div class="challenger1">
+        <div class="challenger_1_form">
             <label for="challenger_1_name"> 
               Name
               <input 
@@ -94,7 +93,6 @@
                 class="challenger_input game_input"
               >
             </label>
-          </div>
           <label for="challenger_1_guess">
             Guess
               <input 
@@ -104,12 +102,13 @@
                 class="challenger_guess game_input"
               >
         </label>
+        </div>
         </section>
+        <section class="challenger_2">
         <h3>
           Challenger 2
         </h3>
-        <section class="challenger_2_input">
-          <div class="challenger2">
+        <div class="challenger_2_form">
             <label for="challenger_2_name"> 
               Name
               <input 
@@ -119,7 +118,6 @@
                 class="challenger_input game_input"
               >
             </label>
-          </div>
           <label for="challenger_2_guess"> 
             Guess
             <input 
@@ -129,34 +127,37 @@
               class="challenger_guess game_input"
             >
           </label>
-        </section>
+        </div>
+      </section>
       </form>
       <div class="challenger_buttons">
-        <input 
-          type="submit" 
+        <input  
+          type="button" 
           name="submit_guess" 
           value="SUBMIT GUESS" 
           class="button"
           id="submit_guess"
         >
         <input 
-          type="submit" 
+          disabled
+          type="button" 
           name="reset_game" 
           value="RESET GAME"
           class="button" 
-          id="reset_game"
+          id="reset_game" 
         >
         <input 
-          type="submit" 
+          disabled
+          type="button" 
           name="clear_game" 
           value="CLEAR GAME" 
           class="button"
           id="clear_game" 
         > 
       </div>
-    </div>
-      <div class ="latest_score">
-        <section class="challenger_1_current_guess">
+    </section>
+    <section class ="latest_score">
+      <div class="challenger_1_current_guess">
           <h3 class="latest_score_head">
             Latest Score
           </h3>
@@ -174,8 +175,8 @@
             <p class="current_guess_2" id="too_one">  
             </p>
           </p>
-        </section>
-        <section class="challenger_2_current_guess">
+      </div>
+      <div class="challenger_2_current_guess">
           <h4 class="player_name" id="player_two_head">
             Challenger 2 Name
           </h4>
@@ -190,8 +191,7 @@
           <p class="current_guess_2" id="too_two">  
           </p>
           </p>
-        </section>
-      </div>
+    </section>
     </div>
     </section>
     <section class="right">
