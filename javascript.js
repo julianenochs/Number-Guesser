@@ -18,13 +18,19 @@ var tooOne = document.querySelector('#too_one');
 var tooTwo = document.querySelector('#too_two');
 var boomOne = document.querySelector('#boomOne');
 var boomTwo = document.querySelector('#boomTwo');
-var randomNumber = 0;
 var resetButton = document.querySelector('#reset_game')
+var randomNumber = 0;
+
+clearButton.addEventListener('click', clearInput)
+function clearInput() {
+	for (var i=0; i < gameInputs.length; i++) {
+		gameInputs[i].value = '';
+	}
+}
 var submitGuessAlert = document.querySelector('#submit_alert')
 
 clearButton.addEventListener('click', clearInput)
 updateButton.addEventListener('click', updateNumber);
-
 
 function updateNumber() {
 	validateUpdateButton();
@@ -59,14 +65,24 @@ submitButton.addEventListener('click', function(event){
 	guessTwo.innerText = playerTwoGuess.value;
 	compareGuess(playerOneGuess.value, tooOne, boomOne);
 	compareGuess(playerTwoGuess.value, tooTwo, boomTwo);
+
 	// console.log(typeof(playerOneGuess.value));
 	// ** returned as a string
 })
 
+function genRandomNumber(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min)) + min
+  console.log(genRandomNumber);
+}
+
 function compareGuess(guess, element, boomElement) {
-	if (guess < randomNumber) {
+	var guessNum = parseInt(guess);
+	console.log(typeof(guessNum));
+	if (guessNum < randomNumber) {
 		element.innerText = 'low.'
-	} else if (guess > randomNumber) {
+	} else if (guessNum > randomNumber) {
 		element.innerText = 'high.'
 	} else {
 		boomElement.innerHTML = 'BOOM!'
@@ -83,6 +99,10 @@ resetButton.addEventListener('click', function() {
 	guessTwo.innerText = '?';
 	firstQ.innerText = '?';
 	secondQ.innerText = '?';
+
+genRandomNumber(randomNumber);
+});
+=======
 	resetNumber ();
 });
 
