@@ -19,19 +19,16 @@ var tooTwo = document.querySelector('#too_two');
 var boomOne = document.querySelector('#boomOne');
 var boomTwo = document.querySelector('#boomTwo');
 var randomNumber = 0;
-var resetButton = document.querySelector('#reset_game')
+var resetButton = document.querySelector('#reset_game');
+var submitGuessAlert = document.querySelector('#submit_alert');
+var rightSideContent = document.querySelector('.right');
 
-clearButton.addEventListener('click', clearInput)
-
-function clearInput() {
-	for (var i=0; i < gameInputs.length; i++) {
-		gameInputs[i].value = '';
-	}
-}
-
+clearButton.addEventListener('click', clearInput);
 updateButton.addEventListener('click', updateNumber);
 
+
 function updateNumber() {
+	validateUpdateButton();
 	var input = minRange.value;
 	var input_two = maxRange.value;
 	firstQ.innerText = input;
@@ -40,29 +37,30 @@ function updateNumber() {
 	console.log(randomNumber);
 	event.preventDefault();
 };
-	
+
+function validateUpdateButton() {
+	if (minRange.value === '' || maxRange.value === '') {
+	submitGuessAlert.innerText = 'Please fill out all fields';
+	} else {
+	submitGuessAlert.innerText = '';
+	}
+
+};
+
+function clearInput() {
+	for (var i=0; i < gameInputs.length; i++) {
+		gameInputs[i].value = '';
+	}
+};
+
 submitButton.addEventListener('click', function(event){
 	playerOneHead.innerText = playerOne.value 
 	playerTwoHead.innerText = playerTwo.value;
 	guessOne.innerText = playerOneGuess.value;
 	guessTwo.innerText = playerTwoGuess.value;
-	compareGuess(playerOneGuess.value, tooOne, boomOne);
-	compareGuess(playerTwoGuess.value, tooTwo, boomTwo);
-	// console.log(typeof(playerOneGuess.value));
-	// ** returned as a string
-})
-
-function compareGuess(guess, element, boomElement) {
-	if (guess < randomNumber) {
-		element.innerText = 'low.'
-	} else if (guess > randomNumber) {
-		element.innerText = 'high.'
-	} else {
-		boomElement.innerHTML = 'BOOM!'
-		element.innerText = ''
-	}
-
-}
+	compareGuess(playerOneGuess.value, playerOne.value, tooOne, boomOne);
+	compareGuess(playerTwoGuess.value, playerTwo.value, tooTwo, boomTwo);
+});
 
 resetButton.addEventListener('click', function() {
 	clearInput();
@@ -75,12 +73,11 @@ resetButton.addEventListener('click', function() {
 	resetNumber ();
 });
 
-
 function genRandomNumber(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min)) + min;
-}
+};
 
 function resetNumber() {
 	var input = 1;
@@ -91,6 +88,61 @@ function resetNumber() {
 	console.log(randomNumber);
 	event.preventDefault();
 };
+
+playerOne.addEventListener('keyup', enableSRC);
+playerTwo.addEventListener('keyup', enableSRC);
+playerOneGuess.addEventListener('keyup', enableSRC);
+playerTwoGuess.addEventListener('keyup', enableSRC);
+
+function enableSRC() {
+	event.preventDefault();
+	document.getElementById("submit_guess").disabled = false;
+	document.getElementById("reset_game").disabled = false;
+	document.getElementById("clear_game").disabled = false;
+};
+
+function compareGuess(guess, name, element, boomElement) {
+	if (guess < randomNumber) {
+		element.innerText = 'low.'
+	} else if (guess > randomNumber) {
+		element.innerText = 'high.'
+	} else {
+		boomElement.innerHTML = 'BOOM!';
+		element.innerText = '';
+		rightSideContent.insertAdjacentHTML('afterbegin', `<section class="card_1">
+  <div class="top_of_card">
+    <p class="challenger_card_name">
+    <p class="challenger_card_name"><span class="bold">${playerOneHead.innerText}</span> <span class="vs">vs</span> <span class="bold">${playerTwoHead.innerText}</span>
+  </div>
+  <div class="middle_of_card">
+    <p class="winner_name bold">
+    ${name}
+    </p>
+    <p class="winner">
+      WINNER
+    </p>
+  </div>
+  <div class="bottom_of_card">
+    <p class="bottom_card_guess">
+      <span class="bold">
+      </span>
+      	GUESSES
+    </p> 
+    <p class="bottom_card_time">
+      <span class="bold">
+      </span>
+        MINUTES
+    </p>
+    <div class="bottom_card_image"><img class="x_button" src="https://www.freeiconspng.com/uploads/white-close-button-png-16.png"><div>
+  </div>
+</section>`) };
+	};
+
+
+// function enableUpdateButton() {
+// 	event.preventDefault();
+// 	document.getElementById("set_range").disabled = false;
+// }
 
 // minRange
 // maxRange
@@ -103,25 +155,6 @@ function resetNumber() {
 // var enableSubmitButton = true;
 // var enableResetButton = true;
 // var enableClearButton = true;
-
-minRange.addEventListener('keyup', enableUpdateButton);
-maxRange.addEventListener('keyup', enableUpdateButton);
-playerOne.addEventListener('keyup', enableSRC);
-playerTwo.addEventListener('keyup', enableSRC);
-playerOneGuess.addEventListener('keyup', enableSRC);
-playerTwoGuess.addEventListener('keyup', enablesSRC);
-
-function enableUpdateButton() {
-	event.preventDefault();
-	document.getElementById("set_range").disabled = false;
-}
-
-function enableSRC() {
-	event.preventDefault();
-	document.getElementById("submit_guess").disabled = false;
-	document.getElementById("reset_game").disabled = false;
-	document.getElementById("clear_game").disabled = false;
-}
 
 // document.getElementById("button").disabled = false;
 
