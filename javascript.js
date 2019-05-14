@@ -23,7 +23,16 @@ var resetButton = document.querySelector('#reset_game');
 var submitGuessAlert = document.querySelector('#submit_alert');
 var rightSideContent = document.querySelector('.right');
 
-clearButton.addEventListener('click', clearInput);
+
+clearButton.addEventListener('click', clearInput)
+function clearInput() {
+	for (var i=0; i < gameInputs.length; i++) {
+		gameInputs[i].value = '';
+	}
+}
+var submitGuessAlert = document.querySelector('#submit_alert')
+
+clearButton.addEventListener('click', clearInput)
 updateButton.addEventListener('click', updateNumber);
 
 
@@ -47,20 +56,46 @@ function validateUpdateButton() {
 
 };
 
+
 function clearInput() {
 	for (var i=0; i < gameInputs.length; i++) {
 		gameInputs[i].value = '';
 	}
 };
 
+
 submitButton.addEventListener('click', function(event){
 	playerOneHead.innerText = playerOne.value 
 	playerTwoHead.innerText = playerTwo.value;
 	guessOne.innerText = playerOneGuess.value;
 	guessTwo.innerText = playerTwoGuess.value;
-	compareGuess(playerOneGuess.value, playerOne.value, tooOne, boomOne);
-	compareGuess(playerTwoGuess.value, playerTwo.value, tooTwo, boomTwo);
+	compareGuess(playerOneGuess.value, tooOne, boomOne);
+	compareGuess(playerTwoGuess.value, tooTwo, boomTwo);
+
+	// console.log(typeof(playerOneGuess.value));
+	// ** returned as a string
 });
+
+function genRandomNumber(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min)) + min
+  console.log(genRandomNumber);
+}
+
+function compareGuess(guess, element, boomElement) {
+	var guessNum = parseInt(guess);
+	console.log(typeof(guessNum));
+	if (guessNum < randomNumber) {
+		element.innerText = 'low.'
+	} else if (guessNum > randomNumber) {
+		element.innerText = 'high.'
+	} else {
+		boomElement.innerHTML = 'BOOM!'
+		element.innerText = ''
+	}
+
+}
 
 resetButton.addEventListener('click', function() {
 	clearInput();
@@ -70,6 +105,10 @@ resetButton.addEventListener('click', function() {
 	guessTwo.innerText = '?';
 	firstQ.innerText = '?';
 	secondQ.innerText = '?';
+
+genRandomNumber(randomNumber);
+});
+
 	resetNumber ();
 });
 
@@ -101,6 +140,32 @@ function enableSRC() {
 	document.getElementById("clear_game").disabled = false;
 	disableRC();
 };
+
+
+
+// function enableUpdateButton() {
+// 	event.preventDefault();
+// 	document.getElementById("set_range").disabled = false;
+// }
+
+// minRange
+// maxRange
+// playerOne
+// playerTwo
+// playerOneGuess
+// playerTwoGuess
+
+// var enableUpdateButton = true;
+// var enableSubmitButton = true;
+// var enableResetButton = true;
+// var enableClearButton = true;
+
+// document.getElementById("button").disabled = false;
+
+
+// enableButtons.addEventListener('keyup', enableResetButton);
+
+// function enableResetButton
 
 function disableRC() {
 	if (playerOne.value === '' && playerTwo.value === '' && playerOneGuess.value === '' && playerTwoGuess.value === '') {
