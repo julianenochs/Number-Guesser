@@ -2,6 +2,7 @@
 <html>
 <head>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800" rel="stylesheet">  
+  <!-- <link rel="stylesheet" type="text/css" href="reset.css"> -->
   <link 
     rel="stylesheet" 
     type="text/css" 
@@ -16,14 +17,14 @@
   <header>
     <h1 class="heading">
       NUMBER 
-        <span>
+        <span class="guesser">
           GUESSER
         </span>
     </h1>
     <h2>
       <span class="line-space"> 
       </span> 
-        Ultimate Challenger Edition  
+        ULTIMATE CHALLENGER EDITION  
       <span class="line-space">  
       </span>
     </h2>
@@ -42,7 +43,7 @@
           type="Number"
           id="min_range"
           name="min_range"
-          class="range game_input block"
+          class="range"
           >
           </label>
         </section>
@@ -53,7 +54,7 @@
             type="Number"
             id="max_range" 
             name="max_range"
-            class="range game_input block"
+            class="range"
           >
           </label>
         </section>
@@ -65,20 +66,19 @@
           class="button"
         >
         </form>
-        <div class ="error0">
-        <p id="submit_alert"> <img src="error-icon.svg" class="error-icon"/>   Please fill out all fields  </p>
-        </div>
+        <div id="error_message"> <img hidden class="icon" src="error-icon.svg"/>
+    	</div>
       </div>
       <section class="current_range">
       <form>
         <p class="current_range_head">
           The Current Range is 
           <span class="number" id="lower_range">
-            ?
+            1
           </span> 
             to 
           <span class = "number" id="upper_range">
-            ?
+            100
           </span>
         </p>
         <section class="challenger_1">
@@ -86,18 +86,20 @@
             Challenger 1
           </h3>
         <div class="challenger_1_form">
+           <div>
             <label for="challenger_1_name"> 
               Name
               <input 
                 type="text" 
                 id="challenger_1_name" 
                 name="challenger_1_name"
-                class="challenger_input game_input"
+                class="challenger_input"
               >
-              <div class ="error2">
-        <p id="submit_alert"> <img src="error-icon.svg" class="error-icon"/>   Please fill out all fields  </p>
-        </div>
             </label>
+            <div class="nameMessage" id="error_message1">
+    		</div>
+          </div>
+          <div>
           <label for="challenger_1_guess">
             Guess
               <input 
@@ -106,10 +108,10 @@
                 name="challenger_1_guess"
                 class="challenger_guess game_input"
               >
-              <div class ="error3">
-        <p id="submit_alert"> <img src="error-icon.svg" class="error-icon"/>   Please fill out all fields  </p>
-        </div>
         </label>
+        <div class="guessMessage" id="error_message2">
+    	</div>
+    	</div>
         </div>
         </section>
         <section class="challenger_2">
@@ -117,18 +119,20 @@
           Challenger 2
         </h3>
         <div class="challenger_2_form">
+            <div>
             <label for="challenger_2_name"> 
               Name
               <input 
                 type="text" 
                 id="challenger_2_name" 
                 name="challenger_2_name"
-                class="challenger_input game_input"
+                class="challenger_input"
               >
-              <div class ="error4">
-        <p id="submit_alert"> <img src="error-icon.svg" class="error-icon"/>   Please fill out all fields  </p>
-        </div>
             </label>
+            <div class="nameMessage" id="error_message3">
+            </div>
+        </div>
+          <div>
           <label for="challenger_2_guess"> 
             Guess
             <input 
@@ -137,14 +141,14 @@
               name="challenger_2_guess"
               class="challenger_guess game_input"
             >
-            <div class ="error5">
-        <p id="submit_alert"> <img src="error-icon.svg" class="error-icon"/>   Please fill out all fields  </p>
-        </div>
           </label>
+           <div class="nameMessage" id="error_message4">
+            </div>
+        </div>
         </div>
       </section>
       </form>
-        <div class="challenger_buttons">
+      <div class="challenger_buttons">
         <input  
           type="button" 
           name="submit_guess" 
@@ -209,7 +213,7 @@
     </div>
     </section>
     <section class="right">
-      <section class="card_1">
+<!--       <section class="card_1">
         <div class="top_of_card">
           <p class="challenger_card_name">
           <p class="challenger_card_name"><span class="bold">CHALLENGER 1 NAME</span> <span class="vs">vs</span> <span class="bold">CHALLENGER 2 NAME</span>
@@ -265,7 +269,7 @@
           <p class="bottom_card_time"><span class="bold">1.35</span> MINUTES</p>
           <div class="bottom_card_image"><img class="x_button" src="https://www.freeiconspng.com/uploads/white-close-button-png-16.png"><div>
         </div>
-      </section>
+      </section> -->
     </section>
   </main>
   <script type="text/javascript" src="javascript.js">

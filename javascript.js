@@ -20,18 +20,24 @@ var boomOne = document.querySelector('#boomOne');
 var boomTwo = document.querySelector('#boomTwo');
 var randomNumber = 0;
 var resetButton = document.querySelector('#reset_game');
-var errorMessageOne = document.querySelector('.error0');
-var errorMessageTwo = document.querySelector('.error2');
+var submitGuessAlert = document.querySelector('#error_message');
+var errorMessageOne = document.querySelector('#error_message1');
+var errorMessageTwo = document.querySelector('#error_message2');
+var errorMessageThree = document.querySelector('#error_message3');
+var errorMessageFour = document.querySelector('#error_message4');
+var rightSideContent = document.querySelector('.right');
+var errorMessage = 'Fill out all fields';
+var errorName = 'Enter a name';
+var errorGuess = 'Enter a guess'
 
-console.log(errorMessageOne);
 clearButton.addEventListener('click', clearInput);
 updateButton.addEventListener('click', updateNumber);
-submitButton.addEventListener('click', runGame);
+
 
 function updateNumber() {
 	validateUpdateButton();
-	var input = minRange.value;
-	var input_two = maxRange.value;
+	var input = Number(minRange.value);
+	var input_two = Number(maxRange.value);
 	firstQ.innerText = input;
 	secondQ.innerText = input_two;
 	randomNumber = genRandomNumber(input, input_two)
@@ -41,9 +47,9 @@ function updateNumber() {
 
 function validateUpdateButton() {
 	if (minRange.value === '' || maxRange.value === '') {
-	errorMessageOne.classList.add('block');
+	submitGuessAlert.innerText = `${errorMessage}`;
 	} else {
-		errorMessageOne.classList.remove('block');
+	submitGuessAlert.innerText = ``;
 	}
 };
 
@@ -53,41 +59,50 @@ function clearInput() {
 	}
 };
 
-function runGame() {
-	validateInputOne();
-	// validateInputTwo();
+submitButton.addEventListener('click', function(event){
+  console.log(event)
+  validateNameOne();
+  validateGuessOne();
+  validateNameTwo();
+  validateGuessTwo();
 	playerOneHead.innerText = playerOne.value 
 	playerTwoHead.innerText = playerTwo.value;
 	guessOne.innerText = playerOneGuess.value;
 	guessTwo.innerText = playerTwoGuess.value;
-	compareGuess(playerOneGuess.value, tooOne, boomOne);
-	compareGuess(playerTwoGuess.value, tooTwo, boomTwo);
-};
+	compareGuess(playerOneGuess.value, playerOne.value, tooOne, boomOne);
+	compareGuess(playerTwoGuess.value, playerTwo.value, tooTwo, boomTwo);
+});
 
-function validateInputOne() {
-	if (playerOne.innerText === '') {
-	errorMessageTwo.classList.add('block');
+function validateNameOne() {
+	if (playerOne.value === '') {
+	errorMessageOne.innerText = `${errorName}`;
 	} else {
-		errorMessageTwo.classList.remove('block');
+	errorMessageOne.innerText = ``;
 	}
 };
 
-// function validateInputTwo() {
-// 	if (guessOne.innerText === '') {
-// 	errorMessageOne.classList.add('block');
-// 	}
-// };
-
-function compareGuess(guess, element, boomElement) {
-	if (guess < randomNumber) {
-		element.innerText = 'low.'
-	} else if (guess > randomNumber) {
-		element.innerText = 'high.'
+function validateGuessOne() {
+	if (playerOneGuess.value === '') {
+	errorMessageTwo.innerText = `${errorGuess}`;
 	} else {
-		boomElement.innerHTML = 'BOOM!'
-		element.innerText = ''
+	errorMessageTwo.innerText = ``;
 	}
+};
 
+function validateNameTwo() {
+	if (playerTwo.value === '') {
+	errorMessageThree.innerText = `${errorName}`;
+	} else {
+	errorMessageThree.innerText = ``;
+	}
+};
+
+function validateGuessTwo() {
+	if (playerTwoGuess.value === '') {
+	errorMessageFour.innerText = `${errorGuess}`;
+	} else {
+	errorMessageFour.innerText = ``;
+	}
 };
 
 resetButton.addEventListener('click', function() {
@@ -127,7 +142,53 @@ function enableSRC() {
 	document.getElementById("submit_guess").disabled = false;
 	document.getElementById("reset_game").disabled = false;
 	document.getElementById("clear_game").disabled = false;
+	disableRC();
 };
 
+function disableRC() {
+	if (playerOne.value === '' && playerTwo.value === '' && playerOneGuess.value === '' && playerTwoGuess.value === '') {
+	document.getElementById("reset_game").disabled = true;
+	document.getElementById("clear_game").disabled = true;
+	}
+}
 
+function compareGuess(guess, name, element, boomElement) {
+	if (guess < randomNumber) {
+		element.innerText = 'low.'
+	} else if (guess > randomNumber) {
+		element.innerText = 'high.'
+	} else {
+		boomElement.innerHTML = 'BOOM!';
+		element.innerText = '';
+		rightSideContent.insertAdjacentHTML('afterbegin', `<section class="card_1">
+  <div class="top_of_card">
+    <p class="challenger_card_name">
+    <p class="challenger_card_name"><span class="bold">${playerOneHead.innerText}</span> <span class="vs">vs</span> <span class="bold">${playerTwoHead.innerText}</span>
+  </div>
+  <div class="middle_of_card">
+    <p class="winner_name bold">
+    ${name}
+    </p>
+    <p class="winner">
+      WINNER
+    </p>
+  </div>
+  <div class="bottom_of_card">
+    <p class="bottom_card_guess">
+      <span class="bold">
+      </span>
+      	GUESSES
+    </p> 
+    <p class="bottom_card_time">
+      <span class="bold">
+      </span>
+        MINUTES
+    </p>
+    <div class="bottom_card_image"><img class="x_button" src="https://www.freeiconspng.com/uploads/white-close-button-png-16.png"><div>
+  </div>
+</section>`) };
+	};
 
+  rightSideContent.addEventListener('click', function() {
+    console.log('Hello');
+  })
