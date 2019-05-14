@@ -139,6 +139,23 @@ input.range {
 	width: 75%;
 }
 
+.error_one,
+.error_two,
+.error_three {
+	display: none;
+}
+
+.block {
+	display: block;
+	border-color: #DD1972;
+}
+
+.error-icon {
+	height: 20px;
+	width: 20px;
+	margin-right: 10px;
+}
+
 #submit_alert {
 	display: flex;
 	justify-content: flex-start;
@@ -153,7 +170,7 @@ input.range {
 	border: solid #D0D2D3;
 	display: flex;
 	flex-direction: column;
-	height: 400px;
+	height: 450px;
 	margin-bottom: 10px;
 	padding: 0px 25px 0px 25px;
 	width: 100%;

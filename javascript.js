@@ -19,10 +19,12 @@ var tooTwo = document.querySelector('#too_two');
 var boomOne = document.querySelector('#boomOne');
 var boomTwo = document.querySelector('#boomTwo');
 var randomNumber = 0;
-var resetButton = document.querySelector('#reset_game')
-var submitGuessAlert = document.querySelector('#submit_alert')
+var resetButton = document.querySelector('#reset_game');
+var errorMessageOne = document.querySelector('.error_one');
+var errorMessageTwo = document.querySelector('.error_two')
+var errorMessageThree = document.querySelector('.error_three');
 
-clearButton.addEventListener('click', clearInput)
+clearButton.addEventListener('click', clearInput);
 updateButton.addEventListener('click', updateNumber);
 
 
@@ -39,29 +41,39 @@ function updateNumber() {
 
 function validateUpdateButton() {
 	if (minRange.value === '' || maxRange.value === '') {
-	submitGuessAlert.innerText = 'Please fill out all fields';
-	} else {
-	submitGuessAlert.innerText = '';
-	}
+	errorMessageOne.classList.add('block');
+	} 
 
-}
+};
 
 function clearInput() {
 	for (var i=0; i < gameInputs.length; i++) {
 		gameInputs[i].value = '';
 	}
-}
+};
 
-submitButton.addEventListener('click', function(event){
+submitButton.addEventListener('click', function(){
+	validateName();
 	playerOneHead.innerText = playerOne.value 
 	playerTwoHead.innerText = playerTwo.value;
 	guessOne.innerText = playerOneGuess.value;
 	guessTwo.innerText = playerTwoGuess.value;
 	compareGuess(playerOneGuess.value, tooOne, boomOne);
 	compareGuess(playerTwoGuess.value, tooTwo, boomTwo);
-	// console.log(typeof(playerOneGuess.value));
-	// ** returned as a string
-})
+});
+
+function validateName() {
+	if (playerOne.innerText === '') {
+	errorMessageTwo.classList.add('block');
+	}
+};
+
+function validateNameTwo() {
+	if (playerTwo.innerText === '') {
+	errorMessageThree.classList.add('block');
+	}
+
+};
 
 function compareGuess(guess, element, boomElement) {
 	if (guess < randomNumber) {
@@ -73,7 +85,7 @@ function compareGuess(guess, element, boomElement) {
 		element.innerText = ''
 	}
 
-}
+};
 
 resetButton.addEventListener('click', function() {
 	clearInput();
@@ -90,7 +102,7 @@ function genRandomNumber(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min)) + min;
-}
+};
 
 function resetNumber() {
 	var input = 1;
@@ -112,8 +124,7 @@ function enableSRC() {
 	document.getElementById("submit_guess").disabled = false;
 	document.getElementById("reset_game").disabled = false;
 	document.getElementById("clear_game").disabled = false;
-}
-
+};
 
 // function enableUpdateButton() {
 // 	event.preventDefault();

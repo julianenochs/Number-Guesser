@@ -65,7 +65,9 @@
           class="button"
         >
         </form>
-        <p id="submit_alert">  </p>
+        <div class ="error_one">
+        <p id="submit_alert"> <img src="error-icon.svg" class="error-icon"/>   Please fill out all fields  </p>
+        </div>
       </div>
       <section class="current_range">
       <form>
@@ -92,6 +94,9 @@
                 name="challenger_1_name"
                 class="challenger_input game_input"
               >
+              <div class ="error_two">
+        <p id="submit_alert"> <img src="error-icon.svg" class="error-icon"/> Enter a name  </p>
+              </div>
             </label>
           <label for="challenger_1_guess">
             Guess
@@ -130,6 +135,8 @@
         </div>
       </section>
       </form>
+              <!-- <div class ="error_three">
+        <p id="submit_alert"> <img src="error-icon.svg" class="error-icon"/> Enter a name  </p> -->
       <div class="challenger_buttons">
         <input  
           type="button" 
