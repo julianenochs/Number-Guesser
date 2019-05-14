@@ -54,6 +54,8 @@ function clearInput() {
 };
 
 submitButton.addEventListener('click', function(event){
+  console.log(event)
+  debugger;
 	playerOneHead.innerText = playerOne.value 
 	playerTwoHead.innerText = playerTwo.value;
 	guessOne.innerText = playerOneGuess.value;
@@ -145,3 +147,7 @@ function compareGuess(guess, name, element, boomElement) {
   </div>
 </section>`) };
 	};
+
+  rightSideContent.addEventListener('click', function() {
+    console.log('Hello');
+  })
