@@ -99,7 +99,15 @@ function enableSRC() {
 	document.getElementById("submit_guess").disabled = false;
 	document.getElementById("reset_game").disabled = false;
 	document.getElementById("clear_game").disabled = false;
+	disableRC();
 };
+
+function disableRC() {
+	if (playerOne.value === '' && playerTwo.value === '' && playerOneGuess.value === '' && playerTwoGuess.value === '') {
+	document.getElementById("reset_game").disabled = true;
+	document.getElementById("clear_game").disabled = true;
+	}
+}
 
 function compareGuess(guess, name, element, boomElement) {
 	if (guess < randomNumber) {
@@ -137,64 +145,3 @@ function compareGuess(guess, name, element, boomElement) {
   </div>
 </section>`) };
 	};
-
-
-// function enableUpdateButton() {
-// 	event.preventDefault();
-// 	document.getElementById("set_range").disabled = false;
-// }
-
-// minRange
-// maxRange
-// playerOne
-// playerTwo
-// playerOneGuess
-// playerTwoGuess
-
-// var enableUpdateButton = true;
-// var enableSubmitButton = true;
-// var enableResetButton = true;
-// var enableClearButton = true;
-
-// document.getElementById("button").disabled = false;
-
-
-// enableButtons.addEventListener('keyup', enableResetButton);
-
-// function enableResetButton
-
-
-// var winnerCard = "<section class=\"card_1\">" +
-//         "<div class=\"top_of_card\">" +
-//           "<p class=\"challenger_card_name\">" +
-//           "<p class=\"challenger_card_name\"><span class=\"bold\">" + 
-//           "CHALLENGER 1 NAME</span> <span class=\"vs\">vs</span>" + 
-//           "<span> + {} class=\"bold\">CHALLENGER 2 NAME</span>" +
-//         "</div>" +
-//         "<div class=\"middle_of_card\">" +
-//           "<p class=\"winner_name bold\">" +
-//             "CHALLENGER 2 NAME" +
-//           "</p>"
-//           "<p class=\"winner\">" +
-//             "WINNER" +
-//           "</p>" +
-//         "</div>" +
-//         "<div class=\"bottom_of_card\">" +
-//           "<p class=\"bottom_card_guess\">" +
-//             "<span class=\"bold\">" +
-//           "23" +
-//             "</span>" +
-//                "GUESSES" +
-//           "</p>" +
-//           "<p class=\"bottom_card_time\">" +
-//             "<span class=\"bold\">" +
-//               "1.35" +
-//             "</span>" +
-//                "MINUTES" +
-//           "</p>" +
-//           "<div class=\"bottom_card_image\">" +
-//           "<img class=\"x_button\" src=" + 
-//           "\"https://www.freeiconspng.com/uploads/" +                    "white-close-button-png-16.png\">" +
-//           "<div>" +
-//         "</div>" +
-//       "</section>"
