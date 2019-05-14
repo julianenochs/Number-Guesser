@@ -139,21 +139,23 @@ input.range {
 	width: 75%;
 }
 
-.error_one,
-.error_two,
-.error_three {
+.error-icon {
+	height: 20px;
+	width: 20px;
+	margin-right: 10px;
+}
+
+.error0,
+.error1,
+.error2,
+.error3,
+.error4,
+.error5 {
 	display: none;
 }
 
 .block {
 	display: block;
-	border-color: #DD1972;
-}
-
-.error-icon {
-	height: 20px;
-	width: 20px;
-	margin-right: 10px;
 }
 
 #submit_alert {

@@ -20,13 +20,13 @@ var boomOne = document.querySelector('#boomOne');
 var boomTwo = document.querySelector('#boomTwo');
 var randomNumber = 0;
 var resetButton = document.querySelector('#reset_game');
-var errorMessageOne = document.querySelector('.error_one');
-var errorMessageTwo = document.querySelector('.error_two')
-var errorMessageThree = document.querySelector('.error_three');
+var errorMessageOne = document.querySelector('.error0');
+var errorMessageTwo = document.querySelector('.error2');
 
+console.log(errorMessageOne);
 clearButton.addEventListener('click', clearInput);
 updateButton.addEventListener('click', updateNumber);
-
+submitButton.addEventListener('click', runGame);
 
 function updateNumber() {
 	validateUpdateButton();
@@ -42,8 +42,9 @@ function updateNumber() {
 function validateUpdateButton() {
 	if (minRange.value === '' || maxRange.value === '') {
 	errorMessageOne.classList.add('block');
-	} 
-
+	} else {
+		errorMessageOne.classList.remove('block');
+	}
 };
 
 function clearInput() {
@@ -52,28 +53,30 @@ function clearInput() {
 	}
 };
 
-submitButton.addEventListener('click', function(){
-	validateName();
+function runGame() {
+	validateInputOne();
+	// validateInputTwo();
 	playerOneHead.innerText = playerOne.value 
 	playerTwoHead.innerText = playerTwo.value;
 	guessOne.innerText = playerOneGuess.value;
 	guessTwo.innerText = playerTwoGuess.value;
 	compareGuess(playerOneGuess.value, tooOne, boomOne);
 	compareGuess(playerTwoGuess.value, tooTwo, boomTwo);
-});
+};
 
-function validateName() {
+function validateInputOne() {
 	if (playerOne.innerText === '') {
 	errorMessageTwo.classList.add('block');
+	} else {
+		errorMessageTwo.classList.remove('block');
 	}
 };
 
-function validateNameTwo() {
-	if (playerTwo.innerText === '') {
-	errorMessageThree.classList.add('block');
-	}
-
-};
+// function validateInputTwo() {
+// 	if (guessOne.innerText === '') {
+// 	errorMessageOne.classList.add('block');
+// 	}
+// };
 
 function compareGuess(guess, element, boomElement) {
 	if (guess < randomNumber) {
@@ -126,62 +129,5 @@ function enableSRC() {
 	document.getElementById("clear_game").disabled = false;
 };
 
-// function enableUpdateButton() {
-// 	event.preventDefault();
-// 	document.getElementById("set_range").disabled = false;
-// }
-
-// minRange
-// maxRange
-// playerOne
-// playerTwo
-// playerOneGuess
-// playerTwoGuess
-
-// var enableUpdateButton = true;
-// var enableSubmitButton = true;
-// var enableResetButton = true;
-// var enableClearButton = true;
-
-// document.getElementById("button").disabled = false;
 
 
-// enableButtons.addEventListener('keyup', enableResetButton);
-
-// function enableResetButton
-
-
-// var winnerCard = "<section class=\"card_1\">" +
-//         "<div class=\"top_of_card\">" +
-//           "<p class=\"challenger_card_name\">" +
-//           "<p class=\"challenger_card_name\"><span class=\"bold\">" + 
-//           "CHALLENGER 1 NAME</span> <span class=\"vs\">vs</span>" + 
-//           "<span> + {} class=\"bold\">CHALLENGER 2 NAME</span>" +
-//         "</div>" +
-//         "<div class=\"middle_of_card\">" +
-//           "<p class=\"winner_name bold\">" +
-//             "CHALLENGER 2 NAME" +
-//           "</p>"
-//           "<p class=\"winner\">" +
-//             "WINNER" +
-//           "</p>" +
-//         "</div>" +
-//         "<div class=\"bottom_of_card\">" +
-//           "<p class=\"bottom_card_guess\">" +
-//             "<span class=\"bold\">" +
-//           "23" +
-//             "</span>" +
-//                "GUESSES" +
-//           "</p>" +
-//           "<p class=\"bottom_card_time\">" +
-//             "<span class=\"bold\">" +
-//               "1.35" +
-//             "</span>" +
-//                "MINUTES" +
-//           "</p>" +
-//           "<div class=\"bottom_card_image\">" +
-//           "<img class=\"x_button\" src=" + 
-//           "\"https://www.freeiconspng.com/uploads/" +                    "white-close-button-png-16.png\">" +
-//           "<div>" +
-//         "</div>" +
-//       "</section>"
