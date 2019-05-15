@@ -82,6 +82,7 @@ function clearInput() {
   }
 };
 
+
 function outsideRange() {
 	if (minRange.value >= maxRange.value && submitGuessAlert.innerText === '') {
 		submitGuessAlert.insertAdjacentHTML('afterbegin', `<img src="error-icon.svg" class="icon"> ${errorRange}`)
