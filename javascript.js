@@ -169,6 +169,7 @@ function resetNumber() {
   event.preventDefault();
 };
 
+
 function enableSRC() {
   event.preventDefault();
   document.getElementById("submit_guess").disabled = false;
