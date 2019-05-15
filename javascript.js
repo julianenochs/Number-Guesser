@@ -31,13 +31,13 @@ var errorName = 'Enter a name';
 var errorGuess = 'Enter a guess';
 var errorRange = 'Invalid input';
 var rangeError = 'Input outside valid range'
+var notNum = 'Not a number'
 var guessNum = document.querySelector('.bottom_card_guess');
 var counter = 0;
 var minimum = parseInt(minRange.value)
 var maximum = parseInt(maxRange.value)
 var playOne = parseInt(playerOneGuess.value)
 var playTwo = parseInt(playerTwoGuess.value)
-
 
 updateButton.addEventListener('click', updateNumber);
 submitButton.addEventListener('click', submit) 
@@ -107,7 +107,6 @@ function submit() {
 };
 
 function guessOutside(guess, showErrorMessageTwo) {
-	
 	if (guess > minimum || guess < maximum && showErrorMessageTwo.innerText === '') {
 		showErrorMessageTwo.insertAdjacentHTML('afterbegin', `<img src="error-icon.svg" class="icon"> ${rangeError}`);
   		} else {
@@ -130,6 +129,14 @@ function validateGuess(playerGuess, showErrorMessageTwo) {
   		} else {
   	showErrorMessageTwo.innerText = '';
   }
+};
+
+function validateNum() {
+	if (minRange.value = 'e' || maxRange.value = 'e'){
+		submitGuessAlert.insertAdjacentHTML('afterbegin', `<img src="error-icon.svg" class="icon"> ${notNum}`);
+ 		   } else {
+  			submitGuessAlert.innerText = '';
+  } 
 };
 
 function resetGame() {
