@@ -110,14 +110,6 @@ function validateGuessTwo() {
   }
 };
 
-// function validateGuessOneNum() {
-//  if (Number(playerTwoGuess.value) >= Number(maxRange.value) || Number(playerTwoGuess.value) <= Number(minRange.value)
-//    errorMessageTwo.innerText = `${errorRange}`; {
-//  } else {
-//    errorMessageTwo.innerText = ``;
-//  }
-// }
-
 resetButton.addEventListener('click', function() {
   playerOneGuess.value = '';
   playerTwoGuess.value = '';
