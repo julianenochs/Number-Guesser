@@ -113,6 +113,8 @@ label {
 
 label {
 	font-size: 18px;
+	width: 100%;
+	display: inline;
 }
 
 .min_range_input {
@@ -120,18 +122,22 @@ label {
 	width: 100%;
 }
 
+.max_range_input {
+	width: 100%;
+}
+
 input.range {
 	border: solid 2px #F3F3F3;
 	display: block;
 	height: 30px;
-	width: 250px;
+	width: 80%;
 }
 
 #set_range {
 	font-weight: 500;
-	margin-left: 80px;
+	margin-left: 1%;
 	margin-top: 15px;
-	width: 75%;
+	width: 70%;
 }
 
 #error_message {
@@ -179,7 +185,16 @@ input.challenger_input {
 	flex-direction: row;
 	height: 35px;
 	margin-right: 15px;
-	width: 460px;
+	width: 100%;
+}
+
+.challengerNameInput {
+	width: 60%;
+	margin-right: 5%;
+}
+
+.challengerGuessInput {
+	width: 30%;
 }
 
 input.challenger_guess{
@@ -187,7 +202,7 @@ input.challenger_guess{
 	display: block flex;
 	flex-direction: row;
 	height: 35px;
-	width: 260px;
+	width: 100%;
 }
 
 .guessMessage,
@@ -271,7 +286,7 @@ input.challenger_guess{
 	height: 42px;
 	margin-top: 30px;
 	text-align: center;
-	width: 220px;
+	width: 30%;
 }
 
 .button:visited {
@@ -455,66 +470,31 @@ input.challenger_guess{
 
 /***************** Media Queries ***********************/
 
-
-@media screen and (max-width: 1577px) {
-	.current_range {
-		height: 645px;
-	}
-
-	.challenger_buttons {
-		display: flex;
-		flex-direction: column;
-}
+@media screen and (max-width: 1200px) {
 
 .button {
 	width: 100%;
 }
-
-	.challenger_1_form,
-	.challenger_2_form {
-		flex-direction: column;
-	}
-
 	
 input.challenger_input,
 input.challenger_guess {
 	width: 100%;
+}
+
+.button {
+	font-size: 1em;
 	}
 }
 
-
-@media screen and (max-width: 1486px) {
-
-	.set_range {
-		display: block flex;
-		height: 275px;
-		justify-content: flex-start;
-	}
-
-	.range_form {
-		display: flex;
-		flex-direction: column;
-	}
-
-	#set_range {
-		height: 42px;
-		width: 85%;
-		margin-right: auto;
-		margin-left: auto;
-	}
-
-	input.range {
-		width: 100%;
-	}
-}
-
-@media screen and (max-width: 712px) {
-/*	main section.right {
- 		background-color: purple;
- 	}*/
+@media screen and (max-width: 800px) {
 
 	.heading {
  		font-size: 3em;
+ 	}
+
+ 	.set_range {
+ 		display: flex;
+ 		flex-direction: column;
  	}
 
  	h2:after, h2:before {
@@ -543,6 +523,34 @@ input.challenger_guess {
  		height: 1000px;
  	}
 
+	.current_range {
+		height: 645px;
+	}
+
+	.challenger_buttons {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.challengerNameInput,
+	.challengerGuessInput {
+		width: 100%;
+	}
+
+	.button {
+		width: 100%;
+	}
+
+	.challenger_1_form,
+	.challenger_2_form {
+		flex-direction: column;
+	}
+
+	input.challenger_input,
+	input.challenger_guess {
+	width: 100%;
+	}
+
  	.bottom_of_card {
  		text-align: center;
  	}
@@ -558,14 +566,6 @@ input.challenger_guess {
 	.bottom_of_card >* {
 		display:inline;
 		font-size: 1em;
-	}
-
-	.bottom_card_guess {
-/*		padding-right: 30%;*/
-	}
-
- 	.bottom_card_time {
- 	/*	padding-left: 10%;*/
 	}
 
 	.x_button {
