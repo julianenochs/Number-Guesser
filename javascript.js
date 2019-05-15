@@ -30,13 +30,27 @@ var errorMessage = 'Fill out all fields';
 var errorName = 'Enter a name';
 var errorGuess = 'Enter a guess';
 var errorRange = 'Invalid input';
+var rangeError = 'Input outside valid range'
+var guessNum = document.querySelector('.bottom_card_guess');
+var counter = 0;
+var minimum = parseInt(minRange.value)
+var maximum = parseInt(maxRange.value)
+var playOne = parseInt(playerOneGuess.value)
+var playTwo = parseInt(playerTwoGuess.value)
 
-clearButton.addEventListener('click', clearInput);
+
 updateButton.addEventListener('click', updateNumber);
 submitButton.addEventListener('click', submit) 
+resetButton.addEventListener('click', resetGame) 
+clearButton.addEventListener('click', clearInput);
+playerOne.addEventListener('keyup', enableSRC);
+playerTwo.addEventListener('keyup', enableSRC);
+playerOneGuess.addEventListener('keyup', enableSRC);
+playerTwoGuess.addEventListener('keyup', enableSRC);
 
 function updateNumber() {
   validateUpdateButton();
+  outsideRange();
   var input = Number(minRange.value);
   var input_two = Number(maxRange.value);
   firstQ.innerText = input;
@@ -49,27 +63,41 @@ function updateNumber() {
 function validateUpdateButton() {
   if ((minRange.value == ( '' || 0 )|| maxRange.value === ( '' || 0 )) && (submitGuessAlert.innerText === '')) {
   submitGuessAlert.insertAdjacentHTML('afterbegin', `<img src="error-icon.svg" class="icon"> ${errorMessage}`);
-  
   } else {
   submitGuessAlert.innerText = '';
   } 
 };
 
-
-
 function clearInput() {
   for (var i=0; i < gameInputs.length; i++) {
     gameInputs[i].value = '';
+    boomOne.innerText = '';
+    boomTwo.innerText = '';
+    tooOne.innerText = '';
+    tooTwo.innerText = '';
+    number_one.innerText = '';
+    number_two.innerText = '';
     firstQ.innerText = 1;
     secondQ.innerText = 100;
+  }
+};
+
+function outsideRange() {
+	if (minRange.value >= maxRange.value && submitGuessAlert.innerText === '') {
+		submitGuessAlert.insertAdjacentHTML('afterbegin', `<img src="error-icon.svg" class="icon"> ${errorRange}`)
+	} else { 
+		submitGuessAlert.innerText = '';
   }
 };
 
 function submit() {
   validateName(playerOne, errorMessageOne);
   validateName(playerTwo, errorMessageThree);
-  validateGuess(playerOneGuess, errorMessageTwo);
-  validateGuess(playerTwoGuess, errorMessageFour);
+  validateGuess(playOne, errorMessageTwo);
+  validateGuess(playTwo, errorMessageFour);
+  guessOutside(playOne, errorMessageTwo);
+  guessOutside(playTwo, errorMessageFour);
+  counter++
   playerOneHead.innerText = playerOne.value 
   playerTwoHead.innerText = playerTwo.value;
   guessOne.innerText = playerOneGuess.value;
@@ -78,25 +106,33 @@ function submit() {
   compareGuess(playerTwoGuess.value, playerTwo.value, tooTwo, boomTwo);
 };
 
+function guessOutside(guess, showErrorMessageTwo) {
+	
+	if (guess > minimum || guess < maximum && showErrorMessageTwo.innerText === '') {
+		showErrorMessageTwo.insertAdjacentHTML('afterbegin', `<img src="error-icon.svg" class="icon"> ${rangeError}`);
+  		} else {
+  			showErrorMessageTwo.innerText = '';
+ } console.log(typeof(guess))
+};
+
 function validateName(playerName, showErrorMessageOne) {
-  if ((playerName.value === '') && showErrorMessageOne.innerText === '') {
+  if (playerName.value === '' && showErrorMessageOne.innerText === '') {
   	showErrorMessageOne.insertAdjacentHTML('afterbegin', `<img src="error-icon.svg" class="icon"> ${errorName}`);
-  } else if ((playerName.value === '') && showErrorMessageOne.innerText !== '') { 
-  	  } else {
+  } else if ((playerName.value !== '') && showErrorMessageOne.innerText !== '') { 
  		 	showErrorMessageOne.innerText = '';
-  	  }
-  	};
+  	}
+  };
 
 function validateGuess(playerGuess, showErrorMessageTwo) {
-  if ((playerGuess.value === '') && showErrorMessageTwo.innerText === ''){
-  showErrorMessageTwo.insertAdjacentHTML('afterbegin', `<img src="error-icon.svg" class="icon"> ${errorGuess}`);
-  } else if ((playerGuess.value === '') && showErrorMessageTwo.innerText !== '') {
-  } else {
+  if (playerGuess.value === '' && showErrorMessageTwo.innerText === '') {
+  	showErrorMessageTwo.insertAdjacentHTML('afterbegin', `<img src="error-icon.svg" class="icon"> ${errorGuess}`);
+  	} else if ((playerGuess.value === '') && showErrorMessageTwo.innerText !== '') {
+  		} else {
   	showErrorMessageTwo.innerText = '';
   }
 };
 
-resetButton.addEventListener('click', function() {
+function resetGame() {
   playerOneGuess.value = '';
   playerTwoGuess.value = '';
   player_one_head.innerText = 'Challenger 1 Name';
@@ -105,8 +141,9 @@ resetButton.addEventListener('click', function() {
   guessTwo.innerText = '?';
   firstQ.innerText = 1;
   secondQ.innerText = 100;
+  counter = 0;
   resetNumber ();
-});
+};
 
 function genRandomNumber(min, max) {
   min = Math.ceil(min);
@@ -124,11 +161,6 @@ function resetNumber() {
   event.preventDefault();
 };
 
-playerOne.addEventListener('keyup', enableSRC);
-playerTwo.addEventListener('keyup', enableSRC);
-playerOneGuess.addEventListener('keyup', enableSRC);
-playerTwoGuess.addEventListener('keyup', enableSRC);
-
 function enableSRC() {
   event.preventDefault();
   document.getElementById("submit_guess").disabled = false;
@@ -142,6 +174,10 @@ function disableRC() {
   document.getElementById("reset_game").disabled = true;
   document.getElementById("clear_game").disabled = true;
   }
+}
+
+function funClicks() {
+	counter++
 }
 
 function compareGuess(guess, name, element, boomElement) {
@@ -169,7 +205,7 @@ function compareGuess(guess, name, element, boomElement) {
     <p class="bottom_card_guess">
       <span class="bold">
       </span>
-        GUESSES
+        GUESSES ${counter}
     </p> 
     <p class="bottom_card_time">
       <span class="bold">

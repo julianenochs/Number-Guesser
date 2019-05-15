@@ -1,3 +1,4 @@
+
 * {
   box-sizing: border-box;
 /*  border: red 1px solid;*/
@@ -518,31 +519,3 @@ input.challenger_guess {
 button:disabled {
 	background-color: #D0D2D3;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
