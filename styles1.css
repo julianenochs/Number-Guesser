@@ -1,3 +1,4 @@
+
 * {
   box-sizing: border-box;
 /*  border: red 1px solid;*/
@@ -287,6 +288,7 @@ input.challenger_guess{
 	margin-top: 30px;
 	text-align: center;
 	width: 30%;
+
 }
 
 .button:visited {
@@ -470,7 +472,9 @@ input.challenger_guess{
 
 /***************** Media Queries ***********************/
 
+
 @media screen and (max-width: 1200px) {
+
 
 .button {
 	width: 100%;
@@ -479,6 +483,7 @@ input.challenger_guess{
 input.challenger_input,
 input.challenger_guess {
 	width: 100%;
+
 }
 
 .button {
@@ -601,4 +606,5 @@ input.challenger_guess {
  .current_range {
  	height: 670px;
  }
+
 }
