@@ -12,8 +12,8 @@ If a guess is too high, the users are prompted with a "This guess is too high" m
 
 Desktop layout:
 
-!(http://frontend.turing.io/assets/images/projects/number-guesser/week2-numberguesser-01.jpg)
+![](http://frontend.turing.io/assets/images/projects/number-guesser/week2-numberguesser-01.jpg)
 
 Mobile layout: 
 
-!(http://frontend.turing.io/assets/images/projects/number-guesser/week2-numberguesser-03.jpg)
+![](http://frontend.turing.io/assets/images/projects/number-guesser/week2-numberguesser-03.jpg)
