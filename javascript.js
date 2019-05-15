@@ -33,7 +33,6 @@ var errorGuess = 'Enter a guess'
 clearButton.addEventListener('click', clearInput);
 updateButton.addEventListener('click', updateNumber);
 
-
 function updateNumber() {
 	validateUpdateButton();
 	var input = Number(minRange.value);
@@ -76,10 +75,13 @@ submitButton.addEventListener('click', function(event){
 function validateNameOne() {
 	if (playerOne.value === '') {
 	errorMessageOne.innerText = `${errorName}`;
-	} else {
-	errorMessageOne.innerText = ``;
-	}
-};
+
+function genRandomNumber(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min)) + min
+  console.log(genRandomNumber);
+}
 
 function validateGuessOne() {
 	if (playerOneGuess.value === '') {
