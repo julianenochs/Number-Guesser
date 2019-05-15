@@ -28,6 +28,7 @@ var errorMessageFour = document.querySelector('#error_message4');
 var rightSideContent = document.querySelector('.right');
 var errorMessage = 'Fill out all fields';
 var errorName = 'Enter a name';
+
 var errorGuess = 'Enter a guess';
 var errorRange = 'Invalid input';
 
@@ -63,12 +64,16 @@ function clearInput() {
   }
 };
 
+
+
+
 submitButton.addEventListener('click', function(event){
   console.log(event)
   validateNameOne();
   validateGuessOne();
   validateNameTwo();
   validateGuessTwo();
+
   // validateGuessOneNum();
   playerOneHead.innerText = playerOne.value 
   playerTwoHead.innerText = playerTwo.value;
@@ -78,45 +83,49 @@ submitButton.addEventListener('click', function(event){
   compareGuess(playerTwoGuess.value, playerTwo.value, tooTwo, boomTwo);
 });
 
+	playerOneHead.innerText = playerOne.value 
+	playerTwoHead.innerText = playerTwo.value;
+	guessOne.innerText = playerOneGuess.value;
+	guessTwo.innerText = playerTwoGuess.value;
+	compareGuess(playerOneGuess.value, playerOne.value, tooOne, boomOne);
+	compareGuess(playerTwoGuess.value, playerTwo.value, tooTwo, boomTwo);
+});
+
 function validateNameOne() {
-  if (playerOne.value === '') {
-  errorMessageOne.insertAdjacentHTML('afterbegin', `<img src="error-icon.svg" class="icon"> ${errorName}`);
-  } else {
-  errorMessageOne.innerText = ``;
-  }
-};
+	if (playerOne.value === '') {
+	errorMessageOne.innerText = `${errorName}`;
+
+function genRandomNumber(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min)) + min
+  console.log(genRandomNumber);
+}
 
 function validateGuessOne() {
-  if (playerOneGuess.value === '') {
-  errorMessageTwo.insertAdjacentHTML('afterbegin', `<img src="error-icon.svg" class="icon"> ${errorGuess}`);
-  } else {
-  errorMessageTwo.innerText = ``;
-  }
+	if (playerOneGuess.value === '') {
+	errorMessageTwo.innerText = `${errorGuess}`;
+	} else {
+	errorMessageTwo.innerText = ``;
+	}
 };
 
 function validateNameTwo() {
-  if (playerTwo.value === '') {
-  errorMessageThree.insertAdjacentHTML('afterbegin', `<img src="error-icon.svg" class="icon"> ${errorName}`);
-  } else {
-  errorMessageThree.innerText = ``;
-  }
+	if (playerTwo.value === '') {
+	errorMessageThree.innerText = `${errorName}`;
+	} else {
+	errorMessageThree.innerText = ``;
+	}
 };
 
 function validateGuessTwo() {
-  if (playerTwoGuess.value === '') {
-  errorMessageFour.insertAdjacentHTML('afterbegin', `<img src="error-icon.svg" class="icon"> ${errorGuess}`);
-  } else {
-  errorMessageFour.innerText = ``;
-  }
+	if (playerTwoGuess.value === '') {
+	errorMessageFour.innerText = `${errorGuess}`;
+	} else {
+	errorMessageFour.innerText = ``;
+	}
 };
 
-// function validateGuessOneNum() {
-//  if (Number(playerTwoGuess.value) >= Number(maxRange.value) || Number(playerTwoGuess.value) <= Number(minRange.value)
-//    errorMessageTwo.innerText = `${errorRange}`; {
-//  } else {
-//    errorMessageTwo.innerText = ``;
-//  }
-// }
 
 resetButton.addEventListener('click', function() {
   playerOneGuess.value = '';
@@ -152,7 +161,8 @@ playerOneGuess.addEventListener('keyup', enableSRC);
 playerTwoGuess.addEventListener('keyup', enableSRC);
 
 function enableSRC() {
-  event.preventDefault();
+
+event.preventDefault();
   document.getElementById("submit_guess").disabled = false;
   document.getElementById("reset_game").disabled = false;
   document.getElementById("clear_game").disabled = false;
@@ -175,6 +185,8 @@ function compareGuess(guess, name, element, boomElement) {
     boomElement.innerHTML = 'BOOM!';
     element.innerText = '';
     rightSideContent.insertAdjacentHTML('afterbegin', `<section class="card_1">
+
+	
   <div class="top_of_card">
     <p class="challenger_card_name">
     <p class="challenger_card_name"><span class="bold">${playerOneHead.innerText}</span> <span class="vs">vs</span> <span class="bold">${playerTwoHead.innerText}</span>
@@ -191,6 +203,7 @@ function compareGuess(guess, name, element, boomElement) {
     <p class="bottom_card_guess">
       <span class="bold">
       </span>
+
         GUESSES
     </p> 
     <p class="bottom_card_time">
@@ -201,7 +214,9 @@ function compareGuess(guess, name, element, boomElement) {
     <div class="bottom_card_image"><img class="x_button" src="https://www.freeiconspng.com/uploads/white-close-button-png-16.png"><div>
   </div>
 </section>`) };
+
   };
+
 
   rightSideContent.addEventListener('click', function() {
     console.log('Hello');

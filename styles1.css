@@ -146,6 +146,12 @@ input.range {
 	color: #DD1972;
 }
 
+#error_message {
+	display: flex;
+	justify-content: flex-start;
+	color: #DD1972;
+}
+
 .icon {
 	height: 20px;
 	width: 20px;
@@ -543,6 +549,7 @@ input.challenger_guess {
 	}
 
 	.challenger_buttons {
+  master
 		display: flex;
 		flex-direction: column;
 	}
@@ -587,6 +594,40 @@ input.challenger_guess {
 		padding-top: 5px;
 		height: 20px;
 		width: 20px;
+	
+    #set_range {
+		height: 42px;
+		width: 85%;
+	}
+
+	input.range {
+		width: 100%;
+	}
+}
+
+@media (max-width: 1577px) {
+	.current_range {
+		height: 645px;
+	}
+
+	.challenger_buttons {
+		display: flex;
+		flex-direction: column;
+}
+
+.button {
+	width: 100%;
+}
+
+	.challenger_1_form,
+	.challenger_2_form {
+		flex-direction: column;
+	}
+
+	
+input.challenger_input,
+input.challenger_guess {
+	width: 100%;
 	}
 }
 
