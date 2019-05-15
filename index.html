@@ -43,7 +43,7 @@
           type="Number"
           id="min_range"
           name="min_range"
-          class="range"
+          class="game_input range"
           >
           </label>
         </section>
@@ -54,7 +54,7 @@
             type="Number"
             id="max_range" 
             name="max_range"
-            class="range"
+            class="game_input range"
           >
           </label>
         </section>
@@ -66,8 +66,8 @@
           class="button"
         >
         </form>
-        <div id="error_message"> <img hidden class="icon" src="error-icon.svg"/>
-    	</div>
+        <p id="error_message"><img hidden class="icon" src="error-icon.svg"/> 
+      </p>
       </div>
       <section class="current_range">
       <form>
@@ -93,11 +93,11 @@
                 type="text" 
                 id="challenger_1_name" 
                 name="challenger_1_name"
-                class="challenger_input"
+                class="challenger_input game_input"
               >
             </label>
             <div class="nameMessage" id="error_message1">
-    		</div>
+        </div>
           </div>
           <div>
           <label for="challenger_1_guess">
@@ -110,8 +110,8 @@
               >
         </label>
         <div class="guessMessage" id="error_message2">
-    	</div>
-    	</div>
+      </div>
+      </div>
         </div>
         </section>
         <section class="challenger_2">
@@ -126,7 +126,7 @@
                 type="text" 
                 id="challenger_2_name" 
                 name="challenger_2_name"
-                class="challenger_input"
+                class="challenger_input game_input"
               >
             </label>
             <div class="nameMessage" id="error_message3">
@@ -155,6 +155,7 @@
           value="SUBMIT GUESS" 
           class="button"
           id="submit_guess"
+          onclick="funClicks();" 
         >
         <input 
           disabled
