@@ -2,6 +2,7 @@
 <html>
 <head>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800" rel="stylesheet">  
+  <!-- <link rel="stylesheet" type="text/css" href="reset.css"> -->
   <link 
     rel="stylesheet" 
     type="text/css" 
@@ -16,14 +17,14 @@
   <header>
     <h1 class="heading">
       NUMBER 
-        <span>
+        <span class="guesser">
           GUESSER
         </span>
     </h1>
     <h2>
       <span class="line-space"> 
       </span> 
-        Ultimate Challenger Edition  
+        ULTIMATE CHALLENGER EDITION  
       <span class="line-space">  
       </span>
     </h2>
@@ -42,7 +43,7 @@
           type="Number"
           id="min_range"
           name="min_range"
-          class="range game_input"
+          class="game_input range"
           >
           </label>
         </section>
@@ -53,7 +54,7 @@
             type="Number"
             id="max_range" 
             name="max_range"
-            class="range game_input"
+            class="game_input range"
           >
           </label>
         </section>
@@ -65,18 +66,19 @@
           class="button"
         >
         </form>
-        <p id="submit_alert">  <!-- <img src="error-icon.svg/> --> </p>
+        <p id="error_message"><img hidden class="icon" src="error-icon.svg"/> 
+      </p>
       </div>
       <section class="current_range">
       <form>
         <p class="current_range_head">
           The Current Range is 
           <span class="number" id="lower_range">
-            ?
+            1
           </span> 
             to 
           <span class = "number" id="upper_range">
-            ?
+            100
           </span>
         </p>
         <section class="challenger_1">
@@ -84,6 +86,7 @@
             Challenger 1
           </h3>
         <div class="challenger_1_form">
+           <div>
             <label for="challenger_1_name"> 
               Name
               <input 
@@ -93,6 +96,10 @@
                 class="challenger_input game_input"
               >
             </label>
+            <div class="nameMessage" id="error_message1">
+        </div>
+          </div>
+          <div>
           <label for="challenger_1_guess">
             Guess
               <input 
@@ -102,6 +109,9 @@
                 class="challenger_guess game_input"
               >
         </label>
+        <div class="guessMessage" id="error_message2">
+      </div>
+      </div>
         </div>
         </section>
         <section class="challenger_2">
@@ -109,6 +119,7 @@
           Challenger 2
         </h3>
         <div class="challenger_2_form">
+            <div>
             <label for="challenger_2_name"> 
               Name
               <input 
@@ -118,6 +129,10 @@
                 class="challenger_input game_input"
               >
             </label>
+            <div class="nameMessage" id="error_message3">
+            </div>
+        </div>
+          <div>
           <label for="challenger_2_guess"> 
             Guess
             <input 
@@ -127,6 +142,9 @@
               class="challenger_guess game_input"
             >
           </label>
+           <div class="nameMessage" id="error_message4">
+            </div>
+        </div>
         </div>
       </section>
       </form>

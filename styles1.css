@@ -61,6 +61,10 @@ h2:before {
 	margin: 0px 5px;
 }
 
+.guesser {
+	font-weight: 300;
+}
+
 /************* Main Body Elements ********************/
 
 main {
@@ -139,12 +143,16 @@ input.range {
 	width: 75%;
 }
 
-#submit_alert {
+#error_message {
 	display: flex;
 	justify-content: flex-start;
 	color: #DD1972;
 }
 
+.icon {
+	height: 20px;
+	width: 20px;
+}
 /***************** Second Box Content ***********************/
 
 .current_range {
@@ -153,7 +161,7 @@ input.range {
 	border: solid #D0D2D3;
 	display: flex;
 	flex-direction: column;
-	height: 400px;
+	height: 430px;
 	margin-bottom: 10px;
 	padding: 0px 25px 0px 25px;
 	width: 100%;
@@ -191,6 +199,12 @@ input.challenger_guess{
 	width: 260px;
 }
 
+.guessMessage,
+.nameMessage {
+	display: flex;
+	justify-content: flex-start;
+	color: #DD1972;
+}
 /***************** Third Box Content ***********************/
 
 .latest_score {
