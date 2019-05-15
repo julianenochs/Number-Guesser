@@ -509,9 +509,9 @@ input.challenger_guess {
 }
 
 @media screen and (max-width: 712px) {
-	main section.right {
+/*	main section.right {
  		background-color: purple;
- 	}
+ 	}*/
 
 	.heading {
  		font-size: 3em;
