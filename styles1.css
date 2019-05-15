@@ -493,6 +493,20 @@ input.challenger_guess {
  	}
 
  	.set_range {
+ 		height: 250px;
+ 	}
+
+ 	#set_range {
+ 		margin: 10px auto 0 auto;
+ 	}
+
+ 	#min_range,
+ 	#max_range {
+ 		width: 100%;
+ 		margin: 0;
+ 	}
+
+ 	.range_form {
  		display: flex;
  		flex-direction: column;
  	}
@@ -521,6 +535,7 @@ input.challenger_guess {
  		display: block;
  		width: 100%;
  		height: 1000px;
+ 		padding-right: 10px;
  	}
 
 	.current_range {
