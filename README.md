@@ -19,3 +19,4 @@ Mobile layout:
 ![](number-guesser_mobile-comp.jpg)
 
 Authors: Eric O'Neill & Julian Enochs-Brown
+
