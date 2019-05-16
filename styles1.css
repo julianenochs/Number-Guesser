@@ -31,31 +31,22 @@ h1 {
 	margin: 0px;
 }
 
+h2:after, h2:before {
+	border-bottom: 2px solid white;
+	content: '';
+	flex: 1 1;
+	margin: 10px;
+	width: 150px;
+}
+
 h2 {
 	color: white;
-	display: inline;
-	font-size: 30px;
-	font-weight:300;
-  	overflow: hidden;
-  	position: relative;
-  	text-align: center; 
-  	width: 50%;
+	display: flex;
+	flex-direction: row;
+	font-weight: 300;
+	margin-top: 1px;
 }
 
-h2:before, h2:after {
-	background-color: white;
-	content: '\ a0';
-	height: 1px;
-	overflow: hidden;
-	position: absolute;
-	top: 51%;
-	width: 49%;
-}
-
-h2:before {
-	margin-left: -50%;
-	text-align: right;
-}
 
 .line-space {
 	margin: 0px 5px;
@@ -122,6 +113,8 @@ label {
 
 label {
 	font-size: 18px;
+	width: 100%;
+	display: inline;
 }
 
 .min_range_input {
@@ -129,18 +122,22 @@ label {
 	width: 100%;
 }
 
+.max_range_input {
+	width: 100%;
+}
+
 input.range {
 	border: solid 2px #F3F3F3;
 	display: block;
 	height: 30px;
-	width: 250px;
+	width: 80%;
 }
 
 #set_range {
 	font-weight: 500;
-	margin-left: 80px;
+	margin-left: 1%;
 	margin-top: 15px;
-	width: 75%;
+	width: 70%;
 }
 
 #error_message {
@@ -188,7 +185,16 @@ input.challenger_input {
 	flex-direction: row;
 	height: 35px;
 	margin-right: 15px;
-	width: 460px;
+	width: 100%;
+}
+
+.challengerNameInput {
+	width: 60%;
+	margin-right: 5%;
+}
+
+.challengerGuessInput {
+	width: 30%;
 }
 
 input.challenger_guess{
@@ -196,7 +202,7 @@ input.challenger_guess{
 	display: block flex;
 	flex-direction: row;
 	height: 35px;
-	width: 260px;
+	width: 100%;
 }
 
 .guessMessage,
@@ -280,7 +286,7 @@ input.challenger_guess{
 	height: 42px;
 	margin-top: 30px;
 	text-align: center;
-	width: 220px;
+	width: 30%;
 }
 
 .button:visited {
@@ -449,7 +455,6 @@ input.challenger_guess{
 	padding:10px;
 	width: 50%;
 }*/
-=======
 	padding-left: 2%;
 }
 
@@ -463,30 +468,76 @@ input.challenger_guess{
 	padding-top: 10px;
 }
 
-@media (max-width: 1486px) {
+/***************** Media Queries ***********************/
 
-	.set_range {
-		display: block flex;
-		height: 275px;
-		justify-content: flex-start;
-	}
+@media screen and (max-width: 1200px) {
 
-	.range_form {
-		display: flex;
-		flex-direction: column;
-	}
+.button {
+	width: 100%;
+}
+	
+input.challenger_input,
+input.challenger_guess {
+	width: 100%;
+}
 
-	#set_range {
-		height: 42px;
-		width: 85%;
-	}
-
-	input.range {
-		width: 100%;
+.button {
+	font-size: 1em;
 	}
 }
 
-@media (max-width: 1577px) {
+@media screen and (max-width: 800px) {
+
+	.heading {
+ 		font-size: 3em;
+ 	}
+
+ 	.set_range {
+ 		height: 250px;
+ 	}
+
+ 	#set_range {
+ 		margin: 10px auto 0 auto;
+ 	}
+
+ 	#min_range,
+ 	#max_range {
+ 		width: 100%;
+ 		margin: 0;
+ 	}
+
+ 	.range_form {
+ 		display: flex;
+ 		flex-direction: column;
+ 	}
+
+ 	h2:after, h2:before {
+		border-bottom: 1px solid white;
+		content: '';
+		flex: 1 1;
+		margin: 10px;
+		width: 0px;
+ 	}
+
+	h2 {
+		color: white;
+		display: flex;
+		flex-direction: row;
+		font-weight: 300;
+		margin-top: 1px;
+ 	}
+
+	.left {
+ 		width: 100%;
+ 	}
+
+	.right {
+ 		display: block;
+ 		width: 100%;
+ 		height: 1000px;
+ 		padding-right: 10px;
+ 	}
+
 	.current_range {
 		height: 645px;
 	}
@@ -494,24 +545,63 @@ input.challenger_guess{
 	.challenger_buttons {
 		display: flex;
 		flex-direction: column;
-}
+	}
 
-.button {
-	width: 100%;
-}
+	.challengerNameInput,
+	.challengerGuessInput {
+		width: 100%;
+	}
+
+	.button {
+		width: 100%;
+	}
 
 	.challenger_1_form,
 	.challenger_2_form {
 		flex-direction: column;
 	}
 
-	
-input.challenger_input,
-input.challenger_guess {
+	input.challenger_input,
+	input.challenger_guess {
 	width: 100%;
+	}
+
+ 	.bottom_of_card {
+ 		text-align: center;
+ 	}
+ 	.bottom_of_card_p {
+		padding-top: 5px;
+	} 
+
+	.challenger_card_name {
+		padding-bottom: 5px;
+		font-size: 1em;
+	}
+
+	.bottom_of_card >* {
+		display:inline;
+		font-size: 1em;
+	}
+
+	.x_button {
+		padding-top: 5px;
+		height: 20px;
+		width: 20px;
 	}
 }
 
+@media screen and (max-width: 427px) {
+ .heading {
+ 		font-size: 2em;
+ }
+ h2 {
+ 	font-size: 1em;
+ }
+
+ .current_range {
+ 	height: 670px;
+ }
+}
 /******* classes for styling and IDs for JS *******/
 
 button:disabled {
